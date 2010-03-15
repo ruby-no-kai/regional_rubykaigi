@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 set :application, "regional"
-set :repository,  "git://github.com/kakutani/regional_rubykaigi.git"
+set :repository,  "git://github.com/ruby-no-kai/regional_rubykaigi.git"
 set :branch, "master"
 
 # If you aren't deploying to /u/apps/#{application} on the target
