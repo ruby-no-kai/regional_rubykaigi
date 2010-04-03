@@ -8,6 +8,7 @@
     = stylesheet_link_tag "application"
     = stylesheet_link_tag "regional"
     = stylesheet_link_tag "simplemodal"
+    = yield :stylesheet
     / IE 6 hacks
     /[if lt IE 7]
       = stylesheet_link_tag "simplemodal_ie", :media => :screen
