@@ -68,6 +68,10 @@
   = form.text_area :desc, :cols => 75, :rows => 20
   %br
 
+%p
+  == スタイルシート:<br />
+  = form.text_area :css, :cols => 75, :rows => 20
+
 - content_for :css do
   = stylesheet_link_tag "ui.datepicker"
 

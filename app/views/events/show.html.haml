@@ -24,3 +24,7 @@
 
   %h3 お問い合わせ
   %p.contact&== #{@event.title}に関するお問い合わせは、#{@event.contact_email.gsub(/@/, ' _at_ ')}までメールにてご連絡ください。
+
+- if @event.css.present?
+  = content_for :stylesheet do
+    %style{:type => "text/css"}= @event.css
