@@ -64,12 +64,12 @@
   == イベント開催翌日以降に表示するメッセージ(#{link_to_hikidoc}):<br />
   = form.text_area :message_of_the_day_after, :cols => 75, :rows => 5
   %br
-  == イベントの説明(#{link_to_hikidoc}):<br />
+  == イベントの説明(#{link_to_hikidoc}):<br />'!'は&lt;h3&gt;として表示されます。<br />
   = form.text_area :desc, :cols => 75, :rows => 20
   %br
 
 %p
-  == スタイルシート:<br />
+  == スタイルシート:<br />最後に適用されます。CSSリテラルで記述できます。<br />
   = form.text_area :css, :cols => 75, :rows => 20
 
 - content_for :css do
