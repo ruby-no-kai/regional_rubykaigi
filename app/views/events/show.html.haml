@@ -4,7 +4,14 @@
 .event
   %h2
     = precede h(@event.title) do
-      %span.official_tag&== (#{@event.official_tag})
+      %span.official_tag
+        <br />(
+        #{@event.official_tag}
+        - if @event.hashtag.present?
+          %span.official_tag
+            ,
+            != link_to @event.hashtag, "twitter.com/search?q=#{URI.encode(@event.hashtag)}"
+        )
 
     -# TODO duplicated
     - if logged_in_as_admin?

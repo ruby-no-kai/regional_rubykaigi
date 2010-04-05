@@ -44,8 +44,8 @@ span.closed {
 }
 
 span.official_tag {
-	font-size: 18px;
-	color: #333;
+	font-size: 16px;
+	color: #666;
 }
 
 div.admin_notice {
@@ -123,4 +123,9 @@ div.registration_link {
 
 div.registration_external {
   margin-left: 2em;
+}
+
+div.event h2 {
+  line-height: 1;
+  margin-bottom: 20px;
 }
