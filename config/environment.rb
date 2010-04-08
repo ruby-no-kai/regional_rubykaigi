@@ -25,14 +25,13 @@ Rails::Initializer.run do |config|
 
   # Skip frameworks you're not going to use. To use Rails without a database
   # you must remove the Active Record framework.
-  # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
-
+  # config.frameworks -= [ :active_record, :active_resource, :action_mailer
   # Specify gems that this application depends on.
   # They can then be installed with "rake gems:install" on new installations.
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'haml'
+  config.gem 'haml', :version => '>=2.2'
   config.gem 'ruby-openid', :lib => 'openid'
 
   # Only load the plugins named here, in the order given. By default, all plugins
