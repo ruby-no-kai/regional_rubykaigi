@@ -62,3 +62,11 @@ namespace :deploy do
 #    notify_irc_cat
 #  end
 end
+
+namespace :bundler do
+  task :bundle do
+    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development test cucumber && bundle lock")
+  end
+end
+
+after 'deploy:finalize_update', 'bundler:bundle'
