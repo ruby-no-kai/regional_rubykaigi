@@ -18,7 +18,7 @@ set :use_sudo, false
 set :runner, "regional"
 ssh_options[:username] = application
 
-set :production_server, "regional.rubykaigi.org"
+set :production_server, "linode.rubykaigi.org"
 role :app, production_server
 role :web, production_server
 role :db,  production_server, :primary => true
