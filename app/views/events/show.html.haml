@@ -10,7 +10,7 @@
         - if @event.hashtag.present?
           %span.official_tag
             ,
-            != link_to @event.hashtag, "twitter.com/search?q=#{URI.encode(@event.hashtag)}"
+            != link_to @event.hashtag, "http://twitter.com/search?q=#{URI.encode(@event.hashtag)}"
         )
 
     -# TODO duplicated
