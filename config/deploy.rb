@@ -45,6 +45,7 @@ end
 namespace :deploy do
   task :after_update_code do
     setup_shared("db", "production.sqlite3")
+    setup_shared("vendor", "bundle")
     setup_shared_config("config_action_controller_session.rb")
     setup_shared_config("initializers/site_keys.rb")
     setup_shared_config("initializers/app_config.rb")
@@ -65,7 +66,7 @@ end
 
 namespace :bundler do
   task :bundle do
-    run("cd #{latest_release} && bundle install #{shared_path}/vendor/ --without development test cucumber && bundle lock")
+    run("cd #{latest_release} && bundle install #{shared_path}/vendor/bundle --deployment --without development test cucumber")
   end
 end
 

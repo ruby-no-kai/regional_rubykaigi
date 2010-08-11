@@ -9,7 +9,7 @@ gem 'sqlite3-ruby'
 gem 'rspec'
 
 group :development do
-  gem 'thin'
+  gem 'thin', :require => nil
 end
 
 group :test do
