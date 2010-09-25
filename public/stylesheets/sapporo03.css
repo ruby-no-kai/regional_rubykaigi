@@ -1,0 +1,414 @@
+@charset "utf-8";
+
+/*--- initialize --------------------------------------*/
+
+*{
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+	letter-spacing:2px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	}
+
+img, table, tr, td, a, form, fieldset {
+	border:none;
+	}
+
+body {
+	background:#a40808 url(/images/sapporo03/body_bg.png) top left repeat-y;
+	margin:0px;
+ 	color: #ffffff;
+}
+
+/*--- initializeFonts --------------------------------------*/
+
+html, h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+	}
+
+body {
+	font-size: 62.5%; /* IE */
+	}
+
+html>/**/body {
+	font-size: 10px; /* Except IE */
+	}
+
+p, caption, th, td, li, dt, dd, q, address{
+	font-size:140%;
+	}
+	
+td ul li{
+	font-size:inherit;
+	font-size:100%; /* IE */
+	}
+
+ul li ul li {
+	font-size:inherit;
+	font-size:100%; /* IE */
+	}
+
+h1 {
+	font-size:140%;
+	}
+
+h3 {
+	font-size:240%;
+	}
+
+h4, h5 {
+	font-size:160%;
+	}
+	
+/*--- defaultTagSettings --------------------------------------*/
+	
+	
+ul, ol {
+	margin:15px 0px 15px 30px;
+	}
+	
+ul li {
+  list-style: none;
+	background: url(../images/sapporo03/list_w.png) no-repeat top left;
+  padding: 0px 5px 0px 20px;
+	}
+	
+ol li {
+	list-style:decimal;
+	}
+	
+q {
+	margin: 15px 0px 15px 20px;
+	display:block;
+	}
+	
+address {
+	font-style:normal;
+	margin:10px 0px;
+	}
+
+hr {
+	margin:10px 0px;
+	}
+
+table {
+	border:1px solid #600;
+	border-collapse: collapse;
+	margin: 10px;
+	}
+	
+table caption {
+	text-align:left;
+	font-weight:bold;
+	margin:0px;
+	}
+	
+table tr td {
+	padding:5px;
+	border:1px solid #600;
+	border-collapse: collapse;
+	background-color:#fff;
+	}
+
+table tr th { 
+	padding:5px;
+	width: 50px;
+	border:1px solid #600;
+	border-collapse: collapse;
+	font-weight:bold;
+	color:#fff;
+	background-color:#c00;
+	}
+
+a:link, a:visited {
+  color: #f61111;
+	text-decoration: none;
+  } 
+	
+a:hover, a:active {
+	text-decoration: underline;
+  }
+	
+a img {
+	padding:0px;
+	background:none;
+	}
+
+h1 {
+  text-align: right;
+  }
+
+h2 {
+  font-family: 'Cantarell';
+  color: #000;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+
+h3, h3 a, h3 a:hover, h3 a:visited, h4, h4 a, h4 a:hover, h4 a:visited {
+	vertical-align: middle;
+	color:#fff;
+	}
+
+
+/*--- idAndClass --------------------------------------*/
+
+.left {
+  text-align: left;
+  }
+
+.right {
+  text-align: right;
+  }
+
+.center {
+  text-align: center;
+  }
+
+.f_left {
+  float: left;
+  }
+
+.f_right {
+ float: right;
+  } 
+
+.clear {
+  clear: both;
+  }
+
+#container {
+	width: 980px;
+	background: url(../images/sapporo03/header_bg.png) no-repeat top left;
+	}
+
+#header {
+	clear:both;
+	width: 710px;
+  margin-left: 250px;
+	}
+
+#sidebar {
+	float: left;
+	width: 200px;
+	margin: 0px 20px 20px 20px;
+	}
+
+#register {
+  border: 10px solid #900407;
+  width: 200px;
+  height:200px;
+  padding: 0px 5px 5px 5px;
+  float: left;
+  margin: 0px 10px 10px 0px;
+  }
+
+#register_btn {
+	display:block;
+	}
+	
+#register_btn a:hover {
+	height:82px;
+	position:relative;
+	top:1px;
+	left:1px;
+	}
+	
+#tags {
+  border: 10px solid #900407;
+  width: 200px;
+  height:200px;
+  padding: 0px 5px 5px 5px;
+  float: right;
+	}
+
+#tags h3{
+  margin: 0px;
+  padding: 0px;
+  }
+
+#tags p {
+ 	background: url(/images/sapporo03/tags_bg.png) no-repeat top left;
+  letter-spacing: 1px;
+	padding: 0px 0px 0px 30px;
+	}
+
+#links {
+  border: 10px solid #900407;
+  width: 200px;
+  height: 200px;
+  padding: 0px 5px 5px 5px;
+  float: right;
+  margin-right: 10px;
+	}
+
+#links p {
+  text-align: center;
+  }
+
+#links ul {
+  margin: 0px;
+  }
+
+#links li {
+  list-style: none;
+	background: url(../images/sapporo03/a_mark_w.png) no-repeat top left;
+  padding: 0px 5px 0px 20px;
+  }
+	
+#access {
+  clear: both;
+  border: 10px solid #900407;
+  width: 680px;
+  padding: 0px 5px 5px 5px;
+  }
+
+#access a{
+  padding:0px 5px 0px 20px;
+	}
+
+#howto {
+  padding: 10px;
+  border: solid 1px #fff;
+  }
+
+#howto dt {
+  float: left;
+  width: 80px;
+  }  
+
+#howto h3 {
+  font-size: 140%;
+  border-bottom: 1px dashed #fff;
+  margin-bottom: 5px;
+  }
+
+#howto dt, #howto dd {
+  font-size: 120%;
+  }
+
+#staffs h4 {
+	border-bottom: 1px solid #fff;
+	margin: 20px 0px 10px 0px;
+	color: #fff;
+	font-size: 140%;
+	}
+
+#staffs ul {
+  margin-left: 0px;
+  }
+
+#content {
+  background-color: #fff;
+  color: #594545;
+	float: right;
+	width: 710px;
+	margin: 20px 20px 0px 0px;
+	}
+
+#content hr {
+  border-color: #ccc;
+  } 
+
+#content ul li {
+  list-style: none;
+	background: url(../images/sapporo03/list_r.png) no-repeat top left;
+}
+
+#content ol li {
+  margin: 0px 5px 0px 20px;
+  }
+
+#content p, #content h4, #content h6, #content ul, #content dl, #content ol {
+  margin: 0px 10px;
+  }
+
+#content div, #content ul, #content ol, #content dl{
+	margin-bottom: 15px;
+	}
+
+#content dt:after {
+  content: "：";
+  }
+
+#content dd {
+ margin-left: 30px;
+  } 
+
+#content p {
+	line-height: 130%;
+	}
+	
+#content a:before{
+  content: url(../images/sapporo03/a_mark_r.png);
+	}
+	
+#content h3 {
+	padding: 20px 10px 2px 0px;
+	background: url(../images/sapporo03/content_bg.png) repeat-y top left;
+  margin-bottom: 10px;
+	}
+	
+#content h4 {
+	background: url(../images/sapporo03/h4_bg.png) repeat-x bottom left;
+	margin:20px 10px 10px 10px;
+	color: #c00;
+	}
+
+#content h5 {
+  color: #c00;
+  margin: 15px 10px 0px 10px;
+  }
+
+#content h5:before {
+  content: "【";
+  }
+
+#content h5:after {
+  content: "】";
+  }  
+
+#content h6 {
+  color: #c00;
+  margin: 5px 10px;
+  font-size: 140%;
+}
+
+#admin {
+  margin: 10px;
+  color: #fff;
+  } 
+
+#admin ul {
+  margin: 10px;
+  }
+
+#admin li {
+  background: none;
+  padding: 0px;
+  }
+
+#links a:link, #links a:hover, #links a:active, #links a:visited,
+#admin a:link, #admin a:hover, #admin a:active, #admin a:visited {
+  color: #fff;
+  } 
+
+#admin a:before { 
+  content: url(../images/sapporo03/a_mark_w.png);
+  }
+
+#to_top{
+  margin-right: 20px;
+  text-align: right;
+  clear: both;
+  } 
+
+#footer{
+  clear: both;
+	border-top: 1px solid #fff;
+	color: #fff;
+	padding:10px;
+	text-align:center;
+	font-size: 80%;
+	}
+	

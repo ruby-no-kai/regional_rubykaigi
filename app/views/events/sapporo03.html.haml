@@ -1,0 +1,140 @@
+!!! XML
+!!! Strict
+
+%html
+  %head
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html", :charset => "utf-8"}
+    %meta{:name => "ROBOTS", :content => "NOARCHIVE" }
+    %meta{:name => "ROBOTS", :content => "INDEX,FOLLOW" }
+    %meta{:"http-equiv" => "imagetoolbar", :content => "no" }
+    %meta{:"http-equiv" => "Expires", :content => "Mon, 04 Dec 1999 21:29:02 GMT" }
+    %meta{:"http-equiv" => "Pragma", :content => "no-cache"}
+    %meta{:"http-equiv" => "cache-control", :content => "no-cache"}
+    %meta{:name => "keywords", :content => "札幌, Ruby, 会議, Kaigi, 03"}
+    %meta{:name => "description", :content => "札幌Ruby会議03の公式サイト。プログラムや参加登録のご案内など。"}
+    %link{:href => "/stylesheets/sapporo03.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+    %title 札幌Ruby会議03 - Regional RubyKaigi
+  %body
+    #container.main
+      #header
+        %a{:name => 'top'} 　 
+        %h1
+          %img{:alt => "Sapporo Ruby Kaigi03 2010-12-04(SAT) at Media Mix Hall", :src => "/images/sapporo03/header_logo.png", :width => "500", :height => "100"}
+        %p
+          %img{:alt => "", :src => "/images/sapporo03/header_photo.png", :width => "710", :height => "250"}
+        #register
+          %h2
+            %img{:alt => 'Register', :src => '/images/sapporo03/register_head.png', :width => "210", :height => "50"}
+          - if @event.expired?
+            = render_hiki(@event.message_of_the_day_after)
+          - elsif !@event.registration_enabled?
+            %p#register_btn
+              = message_for_retgistration_is_closed
+          - else
+            %p 参加登録はこちら 
+            %p#register_btn
+              %a{:href => '/sapporo03/registration?TB_iframe=true&height=580&width=550'}
+                %img{:alt => 'Register Now', :src => '/images/sapporo03/register_btn.png', :width => "200", :height => "70"}
+        #tags
+          %h2
+            %img{:alt => 'TAGS', :src => '/images/sapporo03/tags_head.png', :width => "210", :height => "50"}
+          %h3
+            %img{:alt => 'TAGS', :src => '/images/sapporo03/tags_for_twitter.png', :width => "200", :height => "20"}
+          %p
+            \#sprk03
+          %h3
+            %img{:alt => 'TAGS', :src => '/images/sapporo03/tags_for_blog.png', :width => "200", :height => "20"}
+          %p
+            sappororubykaigi03
+        #links
+          %h2
+            %img{:alt => 'LINKS', :src => '/images/sapporo03/links_head.png', :width => "210", :height => "50"}
+          %p
+            %a{:href=>'http://twitter.com/#search?q=%23sprk03', :target => '_blank'}
+              %img{:alt => '', :src => '/images/sapporo03/links_twitter.png', :width => "60", :height => "60"}
+            %a{:href=>'http://www.flickr.com/photos/tags/sappororubykaigi03', :target => '_blank'}
+              %img{:alt => '', :src => '/images/sapporo03/links_flickr.png', :width => "60", :height => "60"}
+            %a{:href=>'http://www.ustream.tv/channel/sappororubykaigi03', :target => '_blank'}
+              %img{:alt => '', :src => '/images/sapporo03/links_ustream.png', :width => "60", :height => "60"}
+          %ul
+            %li
+              %a{:href => "/"} Regional RubyKaigi
+            %li
+              %a{:href => "http://rubykaigi.tdiary.net/"} RubyKaigi 日記
+            %li
+              %a{:href => "http://www.sweb.co.jp/hall/index.html"} メディアMIXホール
+        #access
+          %h2
+            %img{:alt => 'ACCESS', :src =>'/images/sapporo03/access_head.png', :width => "210", :height => "50"}
+          %p.f_right
+            %a{:href=>'http://maps.google.co.jp/maps/ms?hl=en&ie=UTF8&brcurrent=3,0x5f0b297e2ee8e94b:0x475fa7c2e9f39425,1&msa=0&msid=112453030442650138740.0004906dcb4269722d5d2&ll=43.055186,141.372296&spn=0.005135,0.010654&z=17', :target => '_blank'}
+              %img{:alt => '', :src => '/images/sapporo03/access_btn.png', :width => "146", :height => "40"}
+          %p
+            〒003-0801 札幌市白石区菊水1条3丁目1-5 メディアMIXホール 
+          %ul
+            %li
+              地下鉄東西線菊水駅４番出口から徒歩5分
+            %li
+              遠方からお越しの方はこちらのツアーMLにご参加されると、会場周辺のお食事スポットやスタッフおすすめの情報を閲覧できます。
+          #howto
+            %h3
+              %img{:alt => 'ツアーMLへの参加方法', :src => '/images/sapporo03/howto_head.png', :width => "240", :height => "20"}
+              以下の内容でメールをお送りください。
+            %dl
+              %dt To:
+              %dd sappororubykaigi03tour_at_qwik.jp
+              %dt Cc:
+              %dd tmaeda_at_ruby-sapporo.org
+              %dt From:
+              %dd MLに登録したい自分のアドレス
+              %dt Subject:
+              %dd 参加します
+              %dt Body:
+              %dd 何かひとこと(本文に何か書かないと登録されません)
+      #sidebar        
+        %h2
+          %img{:alt => 'STAFFS', :src => '/images/sapporo03/staffs_head.png', :width => "200", :height => "50"}
+        #staffs
+          %h4 実行委員長
+          %ul
+            %li @snoozer05
+          %h4 運営委員長
+          %ul
+            %li @tmaeda
+          %h4 実行委員
+          %ul
+            %li しだらようじ
+            %li たにぐちふみたけ
+            %li @mrkn
+            %li @tricknotes
+            %li おがさわらゆたか
+            %li @koiwa
+            %li Takeru Naito
+            %li 関谷 繭子(@mayuco)
+            %li すずきゆうすけ
+            %li @h_hiro
+            %li @kaznum
+            %li @hokkai7go
+            %li @onodes
+            %li Sari Sonoda
+            %li まえはなつよし
+            %li kulilii or Kumi Takahashi MITANI
+            %li @nazo 
+      #content
+        .event_desc= render :partial => "event_desc", :locals => {:event => @event}
+      #admin
+        %h2
+          %img{:alt => 'FOR ADMIN', :src => '/images/sapporo03/admin_head.png'}
+        %ul
+          - if logged_in_as_admin?
+            %li
+              = link_to '編集', edit_admin_event_path(@event)
+          %li
+            %a.not_current{:href => "/login",} Login
+      #to_top
+        %p
+          %a{:href => '#top'}
+            %img{:alt => 'TOP', :src => '/images/sapporo03/top_btn.png', :width => "80", :height => "30"}
+      #footer
+        %p
+          &copy 2010 札幌Ruby会議03 実行委員会
