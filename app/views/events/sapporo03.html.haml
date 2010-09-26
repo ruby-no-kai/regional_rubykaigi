@@ -3,7 +3,7 @@
 
 %html
   %head
-    %meta{:"http-equiv" => "Content-Type", :content => "text/html", :charset => "utf-8"}
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html", :charset => "UTF-8"}
     %meta{:name => "ROBOTS", :content => "NOARCHIVE" }
     %meta{:name => "ROBOTS", :content => "INDEX,FOLLOW" }
     %meta{:"http-equiv" => "imagetoolbar", :content => "no" }
@@ -24,7 +24,7 @@
           %img{:alt => "", :src => "/images/sapporo03/header_photo.png", :width => "710", :height => "250"}
         #register
           %h2
-            %img{:alt => 'Register', :src => '/images/sapporo03/register_head.png', :width => "210", :height => "50"}
+            %img{:alt => 'REGISTER', :src => '/images/sapporo03/register_head.png', :width => "210", :height => "50"}
           - if @event.expired?
             = render_hiki(@event.message_of_the_day_after)
           - elsif !@event.registration_enabled?
@@ -34,16 +34,16 @@
             %p 参加登録はこちら 
             %p#register_btn
               %a{:href => '/sapporo03/registration?TB_iframe=true&height=580&width=550'}
-                %img{:alt => 'Register Now', :src => '/images/sapporo03/register_btn.png', :width => "200", :height => "70"}
+                %img{:alt => 'REGISTER NOW', :src => '/images/sapporo03/register_btn.png', :width => "200", :height => "70"}
         #tags
           %h2
             %img{:alt => 'TAGS', :src => '/images/sapporo03/tags_head.png', :width => "210", :height => "50"}
           %h3
-            %img{:alt => 'TAGS', :src => '/images/sapporo03/tags_for_twitter.png', :width => "200", :height => "20"}
+            %img{:alt => 'For Twitter', :src => '/images/sapporo03/tags_for_twitter.png', :width => "200", :height => "20"}
           %p
             \#sprk03
           %h3
-            %img{:alt => 'TAGS', :src => '/images/sapporo03/tags_for_blog.png', :width => "200", :height => "20"}
+            %img{:alt => 'For Blog, Flickr', :src => '/images/sapporo03/tags_for_blog.png', :width => "200", :height => "20"}
           %p
             sappororubykaigi03
         #links
@@ -51,11 +51,11 @@
             %img{:alt => 'LINKS', :src => '/images/sapporo03/links_head.png', :width => "210", :height => "50"}
           %p
             %a{:href=>'http://twitter.com/#search?q=%23sprk03', :target => '_blank'}
-              %img{:alt => '', :src => '/images/sapporo03/links_twitter.png', :width => "60", :height => "60"}
+              %img{:alt => 'Twitter', :src => '/images/sapporo03/links_twitter.png', :width => "60", :height => "60"}
             %a{:href=>'http://www.flickr.com/photos/tags/sappororubykaigi03', :target => '_blank'}
-              %img{:alt => '', :src => '/images/sapporo03/links_flickr.png', :width => "60", :height => "60"}
+              %img{:alt => 'Flickr', :src => '/images/sapporo03/links_flickr.png', :width => "60", :height => "60"}
             %a{:href=>'http://www.ustream.tv/channel/sappororubykaigi03', :target => '_blank'}
-              %img{:alt => '', :src => '/images/sapporo03/links_ustream.png', :width => "60", :height => "60"}
+              %img{:alt => 'Ustream', :src => '/images/sapporo03/links_ustream.png', :width => "60", :height => "60"}
           %ul
             %li
               %a{:href => "/"} Regional RubyKaigi
@@ -68,7 +68,7 @@
             %img{:alt => 'ACCESS', :src =>'/images/sapporo03/access_head.png', :width => "210", :height => "50"}
           %p.f_right
             %a{:href=>'http://maps.google.co.jp/maps/ms?hl=en&ie=UTF8&brcurrent=3,0x5f0b297e2ee8e94b:0x475fa7c2e9f39425,1&msa=0&msid=112453030442650138740.0004906dcb4269722d5d2&ll=43.055186,141.372296&spn=0.005135,0.010654&z=17', :target => '_blank'}
-              %img{:alt => '', :src => '/images/sapporo03/access_btn.png', :width => "146", :height => "40"}
+              %img{:alt => '地図はこちら', :src => '/images/sapporo03/access_btn.png', :width => "146", :height => "40"}
           %p
             〒003-0801 札幌市白石区菊水1条3丁目1-5 メディアMIXホール 
           %ul
@@ -124,7 +124,7 @@
         .event_desc= render :partial => "event_desc", :locals => {:event => @event}
       #admin
         %h2
-          %img{:alt => 'FOR ADMIN', :src => '/images/sapporo03/admin_head.png'}
+          %img{:alt => 'FOR ADMIN', :src => '/images/sapporo03/admin_head.png', :width => "200", :height => "50"}
         %ul
           - if logged_in_as_admin?
             %li
