@@ -17,7 +17,7 @@
   %body
     #container.main
       #header
-        %a{:name => 'top'} 　 
+        %a{:name => 'top'}
         %h1
           %img{:alt => "Sapporo Ruby Kaigi03 2010-12-04(SAT) at Media Mix Hall", :src => "/images/sapporo03/header_logo.png", :width => "500", :height => "100"}
         %p
@@ -31,7 +31,7 @@
             %p#register_btn
               = message_for_retgistration_is_closed
           - else
-            %p 参加登録はこちら 
+            %p 参加登録はこちら
             %p#register_btn
               %a{:href => '/sapporo03/registration?TB_iframe=true&height=580&width=550'}
                 %img{:alt => 'REGISTER NOW', :src => '/images/sapporo03/register_btn.png', :width => "200", :height => "70"}
@@ -70,7 +70,7 @@
             %a{:href=>'http://maps.google.co.jp/maps/ms?hl=en&ie=UTF8&brcurrent=3,0x5f0b297e2ee8e94b:0x475fa7c2e9f39425,1&msa=0&msid=112453030442650138740.0004906dcb4269722d5d2&ll=43.055186,141.372296&spn=0.005135,0.010654&z=17', :target => '_blank'}
               %img{:alt => '地図はこちら', :src => '/images/sapporo03/access_btn.png', :width => "146", :height => "40"}
           %p
-            〒003-0801 札幌市白石区菊水1条3丁目1-5 メディアMIXホール 
+            〒003-0801 札幌市白石区菊水1条3丁目1-5 メディアMIXホール
           %ul
             %li
               地下鉄東西線菊水駅４番出口から徒歩5分
@@ -91,7 +91,7 @@
               %dd 参加します
               %dt Body:
               %dd 何かひとこと(本文に何か書かないと登録されません)
-      #sidebar        
+      #sidebar
         %h2
           %img{:alt => 'STAFFS', :src => '/images/sapporo03/staffs_head.png', :width => "200", :height => "50"}
         #staffs
@@ -119,7 +119,7 @@
             %li Sari Sonoda
             %li まえはなつよし
             %li kulilii or Kumi Takahashi MITANI
-            %li @nazo 
+            %li @nazo
       #content
         .event_desc= render :partial => "event_desc", :locals => {:event => @event}
       #admin
