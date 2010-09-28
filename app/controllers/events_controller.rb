@@ -44,6 +44,10 @@ class EventsController < ApplicationController
     end
 
     @event = Event.find_by_name(params[:name])
+    unless @event
+      render :file => "public/404.html", :status => 404
+      return
+    end
     @page_title = @event.title
   end
 
