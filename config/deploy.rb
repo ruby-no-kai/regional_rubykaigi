@@ -19,6 +19,7 @@ set :runner, "regional"
 ssh_options[:username] = application
 
 set :production_server, "linode.rubykaigi.org"
+set :port, 2022
 role :app, production_server
 role :web, production_server
 role :db,  production_server, :primary => true
