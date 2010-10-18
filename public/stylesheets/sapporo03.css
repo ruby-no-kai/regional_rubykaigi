@@ -139,10 +139,9 @@ h1 {
   }
 
 h2 {
-  font-family: 'Cantarell';
   color: #000;
   letter-spacing: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 h3, h3 a, h3 a:hover, h3 a:visited, h4, h4 a, h4 a:hover, h4 a:visited {
@@ -267,9 +266,26 @@ h3, h3 a, h3 a:hover, h3 a:visited, h4, h4 a, h4 a:hover, h4 a:visited {
   padding:0px 5px 0px 20px;
 	}
 
+#forattendees {
+  border: 10px solid #900407;
+  width: 680px;
+  padding: 0px 5px 5px 5px;
+  }
+
+#forattendees .text{
+  background-color: #fff;
+  color: #594545;
+  padding: 10px;
+  margin-bottom: 10px;
+  }
+
+#forattendees a:before{
+  content: url(../images/sapporo03/a_mark_r.png);
+	}
+
 #howto {
   padding: 10px;
-  border: solid 1px #fff;
+  border: solid 1px #f61111;
   }
 
 #howto dt {
@@ -279,8 +295,11 @@ h3, h3 a, h3 a:hover, h3 a:visited, h4, h4 a, h4 a:hover, h4 a:visited {
 
 #howto h3 {
   font-size: 140%;
-  border-bottom: 1px dashed #fff;
-  margin-bottom: 5px;
+  }
+
+#howto p {
+  border-bottom: 1px dashed #f61111;
+  margin-bottom: 10px;
   }
 
 #howto dt, #howto dd {
@@ -299,80 +318,84 @@ h3, h3 a, h3 a:hover, h3 a:visited, h4, h4 a, h4 a:hover, h4 a:visited {
   }
 
 #content {
-  background-color: #fff;
-  color: #594545;
 	float: right;
 	width: 710px;
 	margin: 20px 20px 0px 0px;
 	}
 
-#content hr {
+.event_desc {
+  background-color: #fff;
+  color: #594545;
+  margin-bottom: 10px;
+	}
+
+.event_desc hr {
   border-color: #ccc;
   } 
 
-#content ul li {
+.event_desc ul li {
   list-style: none;
 	background: url(../images/sapporo03/list_r.png) no-repeat top left;
-}
+  }
 
-#content ol li {
+.event_desc ol li {
   margin: 0px 5px 0px 20px;
   }
 
-#content p, #content h4, #content h6, #content ul, #content dl, #content ol {
+.event_desc p, .event_desc h4, .event_desc h6, .event_desc ul, .event_desc dl, .event_desc ol {
   margin: 0px 10px;
   }
 
-#content div, #content ul, #content ol, #content dl{
+.event_desc div, .event_desc ul, .event_desc ol, .event_desc dl{
 	margin-bottom: 15px;
 	}
 
-#content dt:after {
+.event_desc dt:after {
   content: "：";
   }
 
-#content dd {
- margin-left: 30px;
+.event_desc dd {
+  margin-left: 30px;
   } 
 
-#content p {
+.event_desc p {
 	line-height: 130%;
 	}
 	
-#content a:before{
+.event_desc a:before{
   content: url(../images/sapporo03/a_mark_r.png);
 	}
 	
-#content h3 {
+.event_desc h3 {
 	padding: 20px 10px 2px 0px;
 	background: url(../images/sapporo03/content_bg.png) repeat-y top left;
   margin-bottom: 10px;
 	}
 	
-#content h4 {
+.event_desc h4 {
 	background: url(../images/sapporo03/h4_bg.png) repeat-x bottom left;
 	margin:20px 10px 10px 10px;
 	color: #c00;
 	}
 
-#content h5 {
+.event_desc h5 {
   color: #c00;
   margin: 15px 10px 0px 10px;
   }
 
-#content h5:before {
+.event_desc h5:before {
   content: "【";
   }
 
-#content h5:after {
+.event_desc h5:after {
   content: "】";
   }  
 
-#content h6 {
+.event_desc h6 {
   color: #c00;
   margin: 5px 10px;
   font-size: 140%;
-}
+  }  
 
 #admin {
   margin: 10px;
@@ -411,4 +434,3 @@ h3, h3 a, h3 a:hover, h3 a:visited, h4, h4 a, h4 a:hover, h4 a:visited {
 	text-align:center;
 	font-size: 80%;
 	}
-	

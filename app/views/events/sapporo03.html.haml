@@ -71,26 +71,8 @@
               %img{:alt => '地図はこちら', :src => '/images/sapporo03/access_btn.png', :width => "146", :height => "40"}
           %p
             〒003-0801 札幌市白石区菊水1条3丁目1-5 メディアMIXホール
-          %ul
-            %li
-              地下鉄東西線菊水駅４番出口から徒歩5分
-            %li
-              遠方からお越しの方はこちらのツアーMLにご参加されると、会場周辺のお食事スポットやスタッフおすすめの情報を閲覧できます。
-          #howto
-            %h3
-              %img{:alt => 'ツアーMLへの参加方法', :src => '/images/sapporo03/howto_head.png', :width => "240", :height => "20"}
-              以下の内容でメールをお送りください(メールアドレス中の _at_ を @ に置換してください)。
-            %dl
-              %dt To:
-              %dd sappororubykaigi03tour_at_qwik.jp
-              %dt Cc:
-              %dd tmaeda_at_ruby-sapporo.org
-              %dt From:
-              %dd MLに登録したい自分のアドレス
-              %dt Subject:
-              %dd 参加します
-              %dt Body:
-              %dd 何かひとこと(本文に何か書かないと登録されません)
+            %br
+            (地下鉄東西線菊水駅４番出口から徒歩5分)
       #sidebar
         %h2
           %img{:alt => 'STAFFS', :src => '/images/sapporo03/staffs_head.png', :width => "200", :height => "50"}
@@ -118,17 +100,53 @@
             %li まえはなつよし
             %li kuppi
             %li @kspro
-      #content
-        .event_desc= render :partial => "event_desc", :locals => {:event => @event}
-      #admin
         %h2
           %img{:alt => 'FOR ADMIN', :src => '/images/sapporo03/admin_head.png', :width => "200", :height => "50"}
-        %ul
-          - if logged_in_as_admin?
+        #admin
+          %ul
+            - if logged_in_as_admin?
+              %li
+                = link_to '編集', edit_admin_event_path(@event)
             %li
-              = link_to '編集', edit_admin_event_path(@event)
-          %li
-            %a.not_current{:href => "/login",} Login
+              %a.not_current{:href => "/login"} Login
+      #content
+        .event_desc= render :partial => "event_desc", :locals => {:event => @event}
+        #forattendees
+          %h2
+            %img{:alt => 'FOR ATTENDEES', :src =>'/images/sapporo03/forattendees_head.png', :width => "350", :height => "50"}
+          %h3
+            名札について
+          .text       
+            %p.f_right
+              %img{:alt => '', :src => '/images/sapporo03/nametag.png', :width => "110", :height => "86"}
+            %p
+              今年から札幌Ruby会議でも、日本Ruby会議のようにハガキサイズの名札を配布します。遠くからでも認識しやすいよう、名前は大きく書きましょう。事前に印刷してきたものを、当日会場で貼ることも可能です。詳しくは下記をごらんください。
+            %p
+              %a.mark{:href => "http://rubykaigi.tdiary.net/20100815.html", :target => "_blank"}
+                名札には名前を大きく書きましょう
+          %h3
+            遠方からお越しの方へ
+          .text
+            %p
+              こちらのツアーMLにご参加されると、会場周辺のお食事スポットやスタッフおすすめの情報を閲覧できます。
+            #howto
+              %h3
+                %img{:alt => 'ツアーMLへの参加方法', :src => '/images/sapporo03/howto_head.png', :width => "240", :height => "20"}
+              %p
+                以下の内容でメールをお送りください。
+                %br
+                (メールアドレス中の _at_ を @ に置換してください。)
+              %dl
+                %dt To:
+                %dd sappororubykaigi03tour_at_qwik.jp
+                %dt Cc:
+                %dd tmaeda_at_ruby-sapporo.org
+                %dt From:
+                %dd MLに登録したい自分のアドレス
+                %dt Subject:
+                %dd 参加します
+                %dt Body:
+                %dd 何かひとこと(本文に何か書かないと登録されません)
       #to_top
         %p
           %a{:href => '#top'}
