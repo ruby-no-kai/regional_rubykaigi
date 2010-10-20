@@ -1,3 +1,4 @@
+require 'csv'
 class Admin::AttendeesController < AdminController
   before_filter :fetch_event_with_attendees
 
@@ -7,6 +8,27 @@ class Admin::AttendeesController < AdminController
 
   def index
     @attendees = @event.attendees
+    respond_to do |format|
+      format.html
+      format.csv do
+        buffer = ""
+        CSV::Writer.generate(buffer) do |csv|
+          @attendees.each do |attendee|
+            csv << [
+              attendee.name,
+              attendee.email,
+              attendee.comment,
+              attendee.created_at
+            ]
+          end
+        end
+        filename = Time.now.utc.strftime("%s-attendees-%s.csv" % [
+                                     @event.name,
+                                     Time.now.utc.strftime("%Y%m%d-%H%M%S")
+        ])
+        send_data(buffer, :type => 'text/csv', :filename => filename, :disposition => 'attachment')
+      end
+    end
   end
 
   def destroy
