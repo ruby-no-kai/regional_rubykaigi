@@ -133,3 +133,8 @@ a.regional_rubykaigi, a.regional_rubykaigi:visited {
 span.secret {
 	color: #ccc;
 }
+
+div.error {
+    color: #900;
+    font-weight: bold;
+}
