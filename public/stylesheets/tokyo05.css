@@ -1,0 +1,343 @@
+header, footer, article, nav, section, aside, time, hgroup {
+  display : block;
+}
+html, body, header, footer, article, nav, section, aside, time, h1, h2, h3, p, a, ul, li, dl, dd, dt, table, thead, tfoot, tbody, th, tr, td {
+  border : 0;
+  font : 12px/22px Verdana, sans-serif;
+  margin : 0;
+  outline : 0;
+  padding : 0;
+}
+BODY {
+  background : #FFF;
+  border-top : 0px solid #DB0202;
+  color : #444;
+}
+A {
+  color : #0A647C;
+  text-decoration : none;
+}
+A:HOVER {
+  color : #DB0202;
+}
+H1, H3, H4, H5, H6 {
+  background : url(/images/tokyo05/ai4.png) no-repeat 0 7px;
+  border-bottom : 1px dotted #B5B3A9;
+  color : #222;
+  margin : 0 0 10px;
+  padding : 0 0 0 25px;
+}
+H1,H3 {
+  background : url(/images/tokyo05/ai4.png) no-repeat 0 6px;
+  font-size : 15px;
+}
+H2 {
+  font-size : 14px;
+  margin : 0 0 20px 0;
+}
+H4, H5, H6 {
+  font-size : 13px;
+}
+sup {
+  top : -4px;
+}
+pre {
+  font-size : 10px;
+  line-height : 15px; /*--Height of each line of code--*/
+  overflow : hidden; /*--If the Code exceeds the width, put "auto" and scrolling is available--*/
+  overflow-Y : hidden;  /*--Hides vertical scroll created by IE--*/
+}
+pre code {
+  background : #DDD;
+  border-left: 2px solid #DB0202;
+  margin : 0 0 10px 0;
+  padding : 5px;
+  display : block;
+}
+header {
+  background : url(/images/tokyo05/hd2.png) no-repeat top center;
+  height : 400px;
+  position : relative;
+}
+header a {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background : #DB0202;
+  color : #FFF;
+  font-size: 16px;
+  margin : 0 0 0 0px;
+  padding : 5px 10px;
+  }
+header a:hover {
+  color : #FFF;
+  }
+header p {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background : #000;
+  bottom:30px;
+  color : #FFF;
+  font-weight: bold;
+  opacity: 0.3;
+  padding : 10px;
+  position:absolute;
+  right : 0;
+  width : 300px;
+  text-align: center;
+}
+article {
+  border-right : 1px dotted #666;
+  float : left;
+  height : auto;
+  padding : 0 20px 0 0;
+  width : 490px;
+}
+article p {
+  margin : 0 0 10px 0;
+  text-align: justify;
+}
+cite {
+  border-left: 2px solid #DB0202;
+  color : #666;
+  font-size : 10px;
+  font-style : normal;
+  font-weight : bold;
+  margin : 0;
+  padding : 5px 10px;
+}
+blockquote {
+  border-left: 2px solid #DB0202;
+  color : #666;
+  margin : 0 0 20px 0;
+  padding : 5px 10px;
+}
+article img {
+  float : left;
+  margin : 6px 10px 0 0;
+}
+table {
+  border-collapse : collapse;
+  text-align:left;
+  margin : 0 0 20px 0;
+}
+tr:nth-child(odd) { 
+  background : #FFF;
+}
+tr:nth-child(even) {
+  background : #DDD;
+}
+tr:hover td {
+  color : #DB0202;
+}
+td, th {
+  min-width : 120px;
+  padding : 0 5px;
+  vertical-align:top;
+}
+th {
+  background : #FFF;
+  border-bottom : 2px solid #DB0202;
+  color : #666;
+  font-size : 10px;
+  font-weight : bold;
+}
+td {
+  border-bottom : 1px solid #CCC;
+  font-size : 10px;
+}
+
+/* CALENDAR */
+dl.vevent {
+  margin : -20px 0 20px 0;
+  padding : 0;
+}
+.vevent dt {
+  font-size : 10px;
+  position : relative;
+  left : 0;
+  top : 22px;
+  font-weight : bold;
+}
+.vevent dd
+{
+  border-left : 2px solid #DB0202;
+  font-size : 11px;
+  margin : 0 0 0 80px;
+  padding : 0 0 0 10px;
+}
+dd.summary {
+  font-weight : bold;
+}
+.vevent a {
+  font-size : 11px;
+}
+aside {
+  float : right;
+  margin : 0 0 20px 0;
+  width : 200px;
+}
+article ul, aside ul {
+  list-style : none;
+  margin : 0 0 20px 0;
+}
+article form {
+  background : #DDD;
+  margin : 0 0 20px;
+  padding : 10px;
+}
+
+article label {
+  color : #666;
+  display : block;
+  font-size : 10px;
+  font-weight : bold;
+  margin : 0 0 0 2px;
+}
+article input, article textarea {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border : 1px solid #CCC;
+  font-size : 11px;
+  padding : 4px 5px;
+  width : 458px;
+}
+article input {
+  margin : 0 0 10px;
+}
+article textarea {
+  height : 100px;
+}
+article input.button, .btn {
+  background: #999;
+  border : 1px solid #888;
+  color: #FFF;
+  cursor : pointer;
+  font-weight : bold;
+  margin : 10px 0 0 0;
+  text-shadow : 0 -1px 1px rgba(0,0,0,0.25);
+  width : 25%;
+}
+article ul {
+  margin : 0 0 20px 23px;
+}
+article ul li {
+  background : url(/images/tokyo05/ai2.png) no-repeat 0 8px;
+  padding : 0 0 0 17px;
+}
+nav ul {
+  list-style : none;
+  }
+nav li {
+  background : url(/images/tokyo05/ai1.png) no-repeat 0 8px;
+  padding : 0 0 0 15px;
+  }
+nav li ul, aside li ul li ul {
+  margin : 0;
+  }
+nav li li a {
+  font-size : 11px;
+  }
+nav li li li a {
+  font-size : 10px;
+  }
+nav li li li, aside li.active li li {
+  background : url(/images/tokyo05/ai8.png) no-repeat 0 10px;
+  }
+nav li.active, aside li.active li {
+  background : url(/images/tokyo05/ai2.png) no-repeat 0 8px;
+}
+footer {
+  border-top : 1px dotted #B5B3A9;
+  clear : both;
+  margin : 20px 0;
+}
+footer a, footer p {
+  color : #666;
+  display : inline;
+  font-size : 10px;
+}
+#wrapper, #content {
+  margin : 0 auto;
+  position : relative;
+}
+#wrapper {
+  width : 730px;
+}
+#content {
+  overflow : hidden;
+}
+.detail, .m, .s {
+  -moz-border-radius : 4px;
+  -webkit-border-radius : 4px;
+  -moz-box-shadow : 0 2px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow : 0 2px 2px rgba(0,0,0,0.3);
+  background : #EEE;
+}
+.detail {
+  background : #EEE;
+  margin : 0 0 20px 0;
+  padding : 5px 10px;
+  width : 178px;
+}
+.detail p, .detail a {
+  font-size : 11px;
+  line-height : 15px;
+}
+.detail p {
+  margin : 0 0 10px 0;
+}
+.detail img {
+  float : left;
+  margin : 4px 10px 2px 0;
+}
+.g {  
+  list-style : none;
+  margin : 0 0 10px;
+}
+.g li {
+  display: inline;
+  margin : 0 15px 0 0;
+}
+.g a img {
+  border : 1px solid #999;
+  height : 50px;
+  opacity: 0.8;
+  padding : 1px;
+  width : 50px;
+}
+.g li:last-child {
+  margin : 0 0 10px 0;
+}
+.g a img:hover{
+  opacity: 1;
+}
+.m {
+  margin : 20px 0 3px;
+  padding : 2px 5px;
+}
+.m p, .m a {
+  font-size : 10px;
+  margin : 0;
+}
+.s {
+  -moz-border-radius : 4px;
+  -webkit-border-radius : 4px;
+  margin : 0 0 20px 0;
+  padding : 10px;
+  width : 179px;
+}
+.s input {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border : 1px solid #CCC;
+  color : #999;
+  font-size : 11px;
+  padding : 4px 5px;
+  width : 168px;
+}
+
+#user-bar {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
