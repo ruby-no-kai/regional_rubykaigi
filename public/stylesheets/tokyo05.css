@@ -193,7 +193,7 @@ aside {
   margin : 0 0 20px 0;
   width : 200px;
 }
-article ul, aside ul {
+aside ul {
   list-style : none;
   margin : 0 0 20px 0;
 }
@@ -235,11 +235,10 @@ article input.button, .btn {
   width : 25%;
 }
 article ul {
-  margin : 0 0 20px 23px;
+  margin : 0 0 20px 50px;
 }
 article ul li {
   background : url(/images/tokyo05/ai2.png) no-repeat 0 8px;
-  padding : 0 0 0 17px;
 }
 nav ul {
   list-style : none;

@@ -95,8 +95,8 @@
             「Rubyってなにそれ、おいしいの？」から「仕事でRubyを使うようにするにはどうすればいい？」まで、
             普段疑問に感じていることを解決しましょう。
     
-            - if @event.desc.present?
-              = render_hiki(@event.desc)
+          - if @event.desc.present?
+            = render_hiki(@event.desc)
     
           %h3 お問い合わせ
           %p
