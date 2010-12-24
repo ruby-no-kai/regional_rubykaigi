@@ -44,7 +44,7 @@ def notify_irc_cat
 end
 
 namespace :deploy do
-  task :after_update_code do
+  task :config_symlink do
     setup_shared("db", "production.sqlite3")
     setup_shared("vendor", "bundle")
     setup_shared_config("config_action_controller_session.rb")
@@ -64,6 +64,7 @@ namespace :deploy do
 #    notify_irc_cat
 #  end
 end
+after 'deploy:update_code', 'deploy:config_symlink'
 
 namespace :bundler do
   task :bundle do
