@@ -31,9 +31,9 @@
             .flash.warn= flash[:warn]
           - elsif flash[:notice]
             .flash.notice= flash[:notice]
-  
+
           %h3 東京Ruby会議05について
-    
+
           %p
             東京Ruby会議は東京で5回目の開催となるRegional RubyKaigiです。
             %br
@@ -46,9 +46,9 @@
             %br
             自分たち東京05のスタッフも含め、まだまだ駆け出しのRubyistはたくさんいるのではないでしょうか。
             高橋さんを囲んで、もっとRubyをたのしみたい！という発展途上なRubyistのみなさま、いっしょにKaigiしに来ませんか？
-              
+
           %h3 タイムテーブル
-              
+
           %table#timetable
             %tr
               %th 19:30～20:00
@@ -68,12 +68,12 @@
             %tr
               %th 22:30～22:45
               %td クロージング
-    
+
           %h3 トークセッション
-    
+
           %p
             『たのしいRuby』の著者であり、日本Rubyの会会長でもある高橋征義さんにRubyのたのしさについてお話していただきます。
-    
+
           %blockquote
             語り手プロフィール
             %br
@@ -86,23 +86,23 @@
             著書に『たのしいRuby』『Railsレシピブック』（共著含む）等。
             %br
             好きな作家は新井素子。
-                
-    
+
+
           %h3 テーマトーク
-    
+
           %p
             テーブルごとに様々なテーマを用意します。ご自分の興味のあるテーブルに着席して存分に語り合ってください。
             「Rubyってなにそれ、おいしいの？」から「仕事でRubyを使うようにするにはどうすればいい？」まで、
             普段疑問に感じていることを解決しましょう。
-    
+
           - if @event.desc.present?
             = render_hiki(@event.desc)
-    
+
           %h3 お問い合わせ
           %p
             == #{@event.title}に関するお問い合わせは、#{@event.contact_email.gsub(/@/, ' _at_ ')}までメールにてご連絡ください。
-    
-    
+
+
         %aside
           %h2 REGISTER
           - if @event.expired?
@@ -114,23 +114,23 @@
           - else
             .detail
               = @event.register_information
-    
+
           %h2 DATE
           .detail 2011年2月4日(金)の夜
-    
+
           %h2 ACCESS
           .detail
             = link_to "株式会社ECナビ", "http://ecnavi.co.jp/company/access.html"
             %br
             %p 最寄り駅 JR・東京メトロ 渋谷駅 / 京王井の頭線 神泉駅
-    
+
           %h2 TAGS
           .detail
             Twitter:
             = link_to "#tork05", "http://twitter.com/#search?q=%23tork05"
             %br
             Blog: tokyorubykaigi05
-    
+
           %h2 STAFF
           .detail
             実行委員長: こしばとしあき
@@ -142,19 +142,18 @@
             岩本 政樹
             %br
             伊藤ジュンイチ
-  
+
       %footer
         &copy 2010 東京Ruby会議05実行委員会
         %p Template Design by <a href="http://www.jabz.info/contact/jonas-jared-jacek/" title="Profile of Jonas Jacek">Jonas Jacek</a>
-  
+
         - if !@event.published? && logged_in_as_admin?
           .admin_notice 現在、この画面は管理者にしか見えません。
-  
+
         :javascript
           var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
           document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  
+
         :javascript
           var pageTracker = _gat._getTracker("UA-56065-3");
           pageTracker._trackPageview();
-      
