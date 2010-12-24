@@ -108,9 +108,6 @@
           - if @event.expired?
             .detail
               = render_hiki(@event.message_of_the_day_after)
-          - elsif !@event.registration_enabled?
-            .detail
-              = message_for_retgistration_is_closed
           - else
             .detail
               = render_registration_link(:span)
