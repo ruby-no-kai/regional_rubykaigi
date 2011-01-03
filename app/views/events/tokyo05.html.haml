@@ -32,7 +32,7 @@
           - elsif flash[:notice]
             .flash.notice= flash[:notice]
 
-          %h3 東京Ruby会議05について
+          %h3 東京Ruby会議05について / about TokyoRubyKaigi05
 
           %p
             東京Ruby会議は東京で5回目の開催となるRegional RubyKaigiです。
@@ -47,29 +47,42 @@
             自分たち東京05のスタッフも含め、まだまだ駆け出しのRubyistはたくさんいるのではないでしょうか。
             高橋さんを囲んで、もっとRubyをたのしみたい！という発展途上なRubyistのみなさま、いっしょにKaigiしに来ませんか？
 
-          %h3 タイムテーブル
+          %p
+            Our theme is 'more Kaigi, more Communication, more Challenge'.
+            %br
+            We hope this Kaigi become a good opportunity for Rubyists who want to start or get more communication with Ruby communities.
+            %br
+            So, the main content of this Kaigi is communication.
+            And we have Masayoshi Takahashi -- Author of 'Tanoshii Ruby' -- as a guest talker about the fun of Ruby.
+            %br
+            If you are interested in the fun of Ruby, just join us!
+
+          %h3 タイムテーブル / Time Table
 
           %table#timetable
             %tr
               %th 19:30～20:00
-              %td 開場
+              %td 開場 / Open
             %tr
               %th 20:00～20:05
-              %td オープニング
+              %td オープニング / Introduction
             %tr
               %th 20:05～21:00
               %td
-                トークセッション
+                トークセッション / Talk Session
                 %br
                 語り手 高橋征義さん「Rubyのたのしさについて」
+                %br
+                Talk with Masayoshi Takahashi about 'the fun of Ruby'
             %tr
               %th 21:10～22:30
-              %td テーマトーク
+              %td テーマトーク / Theme Talk
             %tr
               %th 22:30～22:45
-              %td クロージング
+              %td クロージング / Closing
 
-          %h3 トークセッション
+
+          %h3 トークセッション / Talk Session
 
           %p
             『たのしいRuby』の著者であり、日本Rubyの会会長でもある高橋征義さんにRubyのたのしさについてお話していただきます。
@@ -87,8 +100,29 @@
             %br
             好きな作家は新井素子。
 
+          %p
+            Talk with Masayoshi Takahashi about 'the fun of Ruby'
 
-          %h3 テーマトーク
+          %blockquote
+            Talker's profile
+            %br
+            Masayoshi Takahashi
+            %br
+            birth on 1972, at Sapporo(Hokkaido).
+            %br
+            started up 'Tatsujin Syuppann Kai' at Apr 2010
+            %br
+            Rails developer
+            %br
+            Rubyist since 1997
+            %br
+            Founder of Nihon Ruby-no-kai(Japan Ruby Group).
+            %br
+            Author of 'Tanoshii Ruby', 'Rails Recipe Book'
+            %br
+            Favorite author is Motoko Arai
+
+          %h3 テーマトーク / Theme Talk
 
           %p
             テーブルごとに様々なテーマを用意します。ご自分の興味のあるテーブルに着席して存分に語り合ってください。
@@ -98,10 +132,12 @@
           - if @event.desc.present?
             = render_hiki(@event.desc)
 
-          %h3 お問い合わせ
+          %h3 お問い合わせ / Contact
           %p
             == #{@event.title}に関するお問い合わせは、#{@event.contact_email.gsub(/@/, ' _at_ ')}までメールにてご連絡ください。
 
+          %p
+            == Please contact us via Email: #{@event.contact_email.gsub(/@/, ' _at_ ')}
 
         %aside
           %h2 REGISTER
@@ -114,12 +150,16 @@
 
           %h2 DATE
           .detail 2011年2月4日(金)の夜
+          .detail 2011/2/4日(Fri), Night
 
           %h2 ACCESS
           .detail
             = link_to "株式会社ECナビ", "http://ecnavi.co.jp/company/access.html"
             %br
             %p 最寄り駅 JR・東京メトロ 渋谷駅 / 京王井の頭線 神泉駅
+            = link_to "EC Navi Company", "http://ecnavi.co.jp/company/access.html"
+            %br
+            %p Near Station: Shibuya St.,  Keio Inogashira Line, Shinsen St.
 
           %h2 TAGS
           .detail
