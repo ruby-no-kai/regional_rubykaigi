@@ -1,7 +1,7 @@
 header, footer, article, nav, section, aside, time, hgroup {
   display : block;
 }
-html, body, header, footer, article, nav, section, aside, time, h1, h2, h3, p, a, ul, li, dl, dd, dt, table, thead, tfoot, tbody, th, tr, td {
+html, body, header, footer, article, nav, section, aside, time, h1, h2, h3, p, ul, li, dl, dd, dt, table, thead, tfoot, tbody, th, tr, td {
   border : 0;
   font : 12px/22px Verdana, sans-serif;
   margin : 0;
@@ -50,7 +50,7 @@ H3 {
 H4 {
   font-size : 14px;
   font-weight: normal;
-  margin : 0 0 20px 0;
+  margin : 0;
 }
 
 H5 {
@@ -87,7 +87,7 @@ pre code {
   display : block;
 }
 header {
-  background : url(/images/tokyo05/hd2.png) no-repeat top center;
+  background : url(/images/tokyo05/top.png) no-repeat top center;
   height : 400px;
   position : relative;
 }
@@ -142,10 +142,6 @@ blockquote {
   color : #666;
   margin : 0 0 20px 0;
   padding : 5px 10px;
-}
-article img {
-  float : left;
-  margin : 6px 10px 0 0;
 }
 
 table#timetable {

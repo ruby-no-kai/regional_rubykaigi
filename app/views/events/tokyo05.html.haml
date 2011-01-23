@@ -132,6 +132,21 @@
           - if @event.desc.present?
             = render_hiki(@event.desc)
 
+
+          %h3 スポンサー / Sponsors
+
+          %h4
+            %a{:href => "http://camobile.com"} 株式会社シーエー・モバイル / CA MOBILE, LTD.
+          
+          %p
+            = image_tag "tokyo05/camobile.png"
+            
+          %h4
+            %a{:href => "http://everyleaf.com"} 株式会社万葉 / Everyleaf Corporation
+          
+          %p
+            = image_tag "tokyo05/everyleaf.png"
+
           %h3 お問い合わせ / Contact
           %p
             == #{@event.title}に関するお問い合わせは、#{@event.contact_email.gsub(/@/, ' _at_ ')}までメールにてご連絡ください。
