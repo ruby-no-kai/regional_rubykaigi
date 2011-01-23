@@ -199,6 +199,10 @@ article form {
   padding : 10px;
 }
 
+div.badge {
+  text-align: center;
+}
+
 article label {
   color : #666;
   display : block;
@@ -297,10 +301,6 @@ footer a, footer p {
 }
 .detail p {
   margin : 0 0 10px 0;
-}
-.detail img {
-  float : left;
-  margin : 4px 10px 2px 0;
 }
 .g {  
   list-style : none;
