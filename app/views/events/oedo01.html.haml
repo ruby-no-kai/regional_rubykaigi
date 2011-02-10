@@ -12,7 +12,7 @@
     %div#wrapper
       %div#user-bar
         %div#user-bar-greeting
-          <a href="/login" id="link_to_login" style="border: none;" title="221.186.244.73">Not logged in</a>
+          <a href="/login" id="link_to_login" style="border: none;">Admin</a>
       -# header
       %div#logo
       %div#photo
@@ -20,18 +20,30 @@
       %div#container
         -# left
         %div#left(class="radius")
-          :plain
-            <h3>Register</h3>
-            <div class="menu">まだ申し込みは開始していません</div>
+          %h3 Registration
+          %div.menu
+            = render_registration_link
+            参加費用: <strong>お代は見てのお帰り</strong>の予定
+            %div{:style =>'margin:6px 12px;font-size:12px;color:#333'}
+              任意の金額をお支払いください。RubyKaigi2010という国際的なカンファレンスは3日間通しで6,000円でした :)
+            定員: 80名程度
 
-            <h3>Access</h3>
-            <div class="menu">深川江戸資料館レクホール<br>
+          %h3 DateTime
+          %div.menu
+            Date: <strong>2011-04-10(Sun)</strong><br />
+            Open: <strong>13:10</strong>(予定)<br/>
+            Start: <strong>13:25</strong>(予定)<br />
+            End : <strong>16:30</strong>頃
+
+          %h3 Access
+          :plain
+            <div class="menu"><strong>深川江戸資料館レクホール</strong><br>
             都営大江戸線清澄白河駅徒歩3分<br>
             <a href="http://www.kcf.or.jp/fukagawa/map.html">交通案内</a></div>
             <div id="map_canvas"></div>
 
-            <h3>Tags</h3>
-            <div class="menu">
+          %h3 Tags
+          %div.menu
             <dl>
             <dd>公式ハッシュタグ</dd>
             <dt><a href="http://twitter.com/search?q=%23odrk01">#odrk01</a></dt>
@@ -40,13 +52,29 @@
             <dd>ソーシャルブックマーク</dd>
             <dt>oedorubykaigi01</dt>
             </dl>
-            </div>
-            <h3>実行委員長</h3>
-            <div class="menu"><a href="http://twitter.com/kakutani/">@kakutani</a></div>
-
-            <h3>準備と運営</h3>
-            <div class="menu">
-            <a href="http://asakusa.rubyist.net/">Asakusa.rb</a>メンバーの面々</div>
+          %h3 Organizers
+          %div.menu
+            大江戸Ruby会議01はAsakusa.rbの運営でお届けします
+            %dl
+              %dd 実行委員長
+              %dt
+                != link_to_twitter('@kakutani')
+                (Asakusa.rb)
+              %dd 会計
+              %dt
+                != link_to_twitter('@hsbt')
+                (Asakusa.rb)
+              %dd レポート班
+              %dt
+                != link_to_twitter('@gunjisatoshi')
+                (Asakusa.rb)
+              %dd 懇親会幹事
+              %dt
+                != link_to_twitter('takkanm')
+                (Asakusa.rb)
+              %dd その他準備と運営
+              %dt
+                %a{:href => 'http://asakusa.rubyist.net/'}Asakusa.rb
         -# Main
         %div#main
           = render_hiki(@event.desc)
