@@ -15,4 +15,9 @@ module ApplicationHelper
   def link_to_hikidoc
     link_to('HikiDoc', "http://projects.netlab.jp/hikidoc/?TextFormattingRules.ja")
   end
+
+  def link_to_twitter(username)
+    link, label = (username[0, 1] != "@" ? [username, "@#{username}"] : [ username[1..-1], username])
+    link_to(label, "http://twitter.com/#{link}")
+  end
 end
