@@ -168,7 +168,7 @@ div#main	{
 	line-height: 160%;
 }
 
-#main dd	{
+#main dt	{
 	margin: 0;
 	background: url("/images/oedo01/icon.png") no-repeat;
 	padding-left:20px;
@@ -176,7 +176,7 @@ div#main	{
 	border-bottom: solid 1px #444;
 }
 
-#main dt	{
+#main dd	{
 	padding-left: 15px;
 	margin: 0 0 10px 0;
 }
