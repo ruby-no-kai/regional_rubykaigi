@@ -1,0 +1,182 @@
+/*全体*/
+body	{
+	background: url(image/bg.png) black;
+	font-family: Verdana, sans-serif;
+	margin: 0;
+}
+
+div#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+div#container	{
+	width: 958px;
+	margin: 0;
+	background: #000;
+	display: -webkit-box; /* safari,chrome用 */
+	display: -moz-box; /* firefox用 */
+}
+
+#user-bar {
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #000;
+	color: #fff;
+	font-size: 80%;
+}
+
+#user-bar a {
+	color: #c0c0c0;
+	text-decoration: none;
+}
+
+.radius{
+	border-radius: 10px;
+	-webkit-border-radius: 10px; /*safari,chrome用*/
+	-moz-border-radius: 10px; /*firefox用*/
+}
+
+.shadow{
+	border: solid 1px white;
+	-moz-box-shadow: 1px 2px 3px #777;
+	-webkit-box-shadow: 1px 2px 3px #777;
+}
+
+
+/* header */
+
+div#logo	{
+	background: url(image/logo.png) no-repeat #fff;	
+	width: 960px;
+	height: 132px;
+}
+
+div#photo	{
+	background: url(image/oedo_top.jpg) no-repeat;
+	width: 960px;
+	height: 360px;
+}
+
+
+/*左側*/
+div#left	{
+	width: 278px;
+	margin: 14px 0 10px 24px;
+	padding: 10px;
+	background: #FF9966;
+	-webkit-box-ordinal-group: 1;　/* Safari,Google Chrome用（1番目に表示 */  
+    -moz-box-ordinal-group: 1;　/* Firefox用（1番目に表示） */  
+}
+
+#left h3	{
+	width: 278px;
+	color: #B12100;
+	border-bottom: dashed 2px #946243;
+}
+
+.menu	{
+	width: 263px;
+	font-size: 15px;
+	padding: 0 0 0 15px;
+}
+
+.menu a {
+	color: #005243;
+	font-weight: bold;
+	text-decoration: none;	
+}
+
+.menu a:hover {
+	color: #732100;
+	text-decoration: underline;
+}
+
+.menu a:link,.menu a:visited	{
+	color:#B12100:
+}
+
+.menu dd	{
+	margin: 0;
+	padding: 0;
+}
+
+.menu dt	{
+	font-weight: bold;
+	color: #005243;
+	margin: 0 0 5px 0;
+	padding: 0 0 0 10px;
+}
+
+div#map_canvas	{
+	width: 240px;
+	height: 240px;
+	margin: 5px 19px;
+}
+
+/*メイン*/
+div#main	{
+	width: 570px;
+	margin: 10px 24px 10px 12px;
+	padding:10px;
+	background: #eee;
+	border: double 8px black;
+	color: #444;
+	font-size: 16px;
+	-webkit-box-ordinal-group: 2;　/* Safari,Google Chrome用（2番目に表示 */  
+    -moz-box-ordinal-group: 2;　/* Firefox用（2番目に表示） */  
+}
+
+#main a	{
+	color: #444;
+}
+
+
+#main a:hover {
+	color: #c70067;
+	text-decoration: underline;
+}
+
+#main a:link	{
+	color: hotpink:
+}
+
+#main h4	{
+	background: url(image/entry_title.png) no-repeat;
+	height:30px;
+	padding: 2px 0 0 40px;
+	margin: 15px 0 0 0;
+	font-size: 20px;
+	color: #000;
+}
+
+#main p	{
+	padding: 0 20px;
+	line-height: 160%;
+}
+
+#main ul {
+	list-style-type: square;
+	padding-right: 10px;
+	line-height: 160%;
+}
+
+#main dl	{
+	padding: 0 20px;
+	line-height: 160%;
+}
+
+#main dd	{
+	margin: 0;
+	background: url(image/icon.png) no-repeat;
+	padding-left:20px;
+	font-weight: bold;
+	border-bottom: solid 1px #444;
+}
+
+#main dt	{
+	padding-left: 15px;
+	margin: 0 0 10px 0;
+}
