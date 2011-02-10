@@ -1,6 +1,6 @@
 /*全体*/
 body	{
-	background: url(image/bg.png) black;
+	background: url("/images/oedo01/bg.png") black;
 	font-family: Verdana, sans-serif;
 	margin: 0;
 }
@@ -49,13 +49,13 @@ div#container	{
 /* header */
 
 div#logo	{
-	background: url(image/logo.png) no-repeat #fff;	
+	background: url("/images/oedo01/logo.png") no-repeat #fff;
 	width: 960px;
 	height: 132px;
 }
 
 div#photo	{
-	background: url(image/oedo_top.jpg) no-repeat;
+	background: url("/images/oedo01/oedo_top.jpg") no-repeat;
 	width: 960px;
 	height: 360px;
 }
@@ -67,8 +67,8 @@ div#left	{
 	margin: 14px 0 10px 24px;
 	padding: 10px;
 	background: #FF9966;
-	-webkit-box-ordinal-group: 1;　/* Safari,Google Chrome用（1番目に表示 */  
-    -moz-box-ordinal-group: 1;　/* Firefox用（1番目に表示） */  
+	-webkit-box-ordinal-group: 1;　/* Safari,Google Chrome用（1番目に表示 */
+    -moz-box-ordinal-group: 1;　/* Firefox用（1番目に表示） */
 }
 
 #left h3	{
@@ -86,7 +86,7 @@ div#left	{
 .menu a {
 	color: #005243;
 	font-weight: bold;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 .menu a:hover {
@@ -125,8 +125,8 @@ div#main	{
 	border: double 8px black;
 	color: #444;
 	font-size: 16px;
-	-webkit-box-ordinal-group: 2;　/* Safari,Google Chrome用（2番目に表示 */  
-    -moz-box-ordinal-group: 2;　/* Firefox用（2番目に表示） */  
+	-webkit-box-ordinal-group: 2;　/* Safari,Google Chrome用（2番目に表示 */
+    -moz-box-ordinal-group: 2;　/* Firefox用（2番目に表示） */
 }
 
 #main a	{
@@ -144,7 +144,7 @@ div#main	{
 }
 
 #main h4	{
-	background: url(image/entry_title.png) no-repeat;
+	background: url("/images/oedo01/entry_title.png") no-repeat;
 	height:30px;
 	padding: 2px 0 0 40px;
 	margin: 15px 0 0 0;
@@ -170,7 +170,7 @@ div#main	{
 
 #main dd	{
 	margin: 0;
-	background: url(image/icon.png) no-repeat;
+	background: url("/images/oedo01/icon.png") no-repeat;
 	padding-left:20px;
 	font-weight: bold;
 	border-bottom: solid 1px #444;

@@ -1,113 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<link href="top.css" rel="stylesheet" type="text/css" /> 
+!!! Strict
 
-<!-- GoogleMapsApi -->
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="maps.js"></script>
+%html
+  %head
+    %meta(charset="utf-8")
+    != stylesheet_link_tag "oedo01"
+    <!-- GoogleMapsApi -->
+    %meta{:name => "viewport", :content => "initial-scale=1.0, user-scalable=no"}
+    %script{:type => "text/javascript", :src => "http://maps.google.com/maps/api/js?sensor=false"}
+    %script{:type => "text/javascript", :src => "/javascripts/oedo01/maps.js"}
+  %body(onload="initialize()")
+    %div#wrapper
+      %div#user-bar
+        %div#user-bar-greeting
+          <a href="/login" id="link_to_login" style="border: none;" title="221.186.244.73">Not logged in</a>
+      -# header
+      %div#logo
+      %div#photo
+      -# container
+      %div#container
+        -# left
+        %div#left(class="radius")
+          :plain
+            <h3>Register</h3>
+            <div class="menu">まだ申し込みは開始していません</div>
 
-</head>
-<body onload="initialize()">
-<div id="wrapper">
-<div id='user-bar'> 
-<div id='user-bar-greeting'><a href="/login" id="link_to_login" style="border: none;" title="221.186.244.73">Not logged in</a></div> 
-<div id='login_dialog' style='display:none;'><h1>Log In</h1> 
-<p>(アカウントがあらかじめ存在していないとログインできません)</p> 
-<form action="/session" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="t2bcqIq6u8p5E7BU8hc5cko3JmJ+b85s0cMTBMOvyQY=" /></div> 
-<p> 
-<label for='openid_identifier'>OpenID:</label> 
-<input id="openid_identifier" name="openid_identifier" size="50" type="text" /> 
-<input name="commit" type="submit" value="Log in" /> 
-</p> 
-</form> 
-<a href="/session?openid_identifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'post'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 't2bcqIq6u8p5E7BU8hc5cko3JmJ+b85s0cMTBMOvyQY='); f.appendChild(s);f.submit();return false;">googleアカウントでログイン</a> 
-<br /> 
-<a href="/session?openid_identifier=https%3A%2F%2Fmixi.jp" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'post'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 't2bcqIq6u8p5E7BU8hc5cko3JmJ+b85s0cMTBMOvyQY='); f.appendChild(s);f.submit();return false;">mixiアカウントでログイン</a> 
-</div> 
-</div> 
+            <h3>Access</h3>
+            <div class="menu">深川江戸資料館レクホール<br>
+            都営大江戸線清澄白河駅徒歩3分<br>
+            <a href="http://www.kcf.or.jp/fukagawa/map.html">交通案内</a></div>
+            <div id="map_canvas"></div>
 
+            <h3>Tags</h3>
+            <div class="menu">
+            <dl>
+            <dd>公式ハッシュタグ</dd>
+            <dt><a href="http://twitter.com/search?q=%23odrk01">#odrk01</a></dt>
+            <dd>公式Twitterアカウント</dd>
+            <dt><a href="http://twitter.com/OedoRubyKaigi/">@OedoRubyKaigi</a></dt>
+            <dd>ソーシャルブックマーク</dd>
+            <dt>oedorubykaigi01</dt>
+            </dl>
+            </div>
+            <h3>実行委員長</h3>
+            <div class="menu"><a href="http://twitter.com/kakutani/">@kakutani</a></div>
 
-<!-- header -->
-<div id="logo"></div>
-<div id="photo"></div>
-<!-- header -->
-
-
-<!-- container -->
-<div id ="container">
-
-
-	<!-- left -->
-	<div id="left" class="radius">
-
-	<h3>Register</h3>
-	<div class="menu">まだ申し込みは開始していません</div>
-	
-	<h3>Access</h3>
-	<div class="menu">深川江戸資料館レクホール<br>
-	都営大江戸線清澄白河駅徒歩3分<br>
-	<a href="http://www.kcf.or.jp/fukagawa/map.html">交通案内</a></div>
-	<div id="map_canvas"></div>
-
-	<h3>Tags</h3>
-	<div class="menu">
-	<dl>
-	<dd>公式ハッシュタグ</dd>
-	<dt><a href="http://twitter.com/search?q=%23odrk01">#odrk01</a></dt>
-	<dd>公式Twitterアカウント</dd>
-	<dt><a href="http://twitter.com/OedoRubyKaigi/">@OedoRubyKaigi</a></dt>
-	<dd>ソーシャルブックマーク</dd>
-	<dt>oedorubykaigi01</dt>
-	</dl>
-	</div>
-	<h3>実行委員長</h3>
-	<div class="menu"><a href="http://twitter.com/kakutani/">@kakutani</a></div>
-
-	<h3>準備と運営</h3>
-	<div class="menu">
-	<a href="http://asakusa.rubyist.net/">Asakusa.rb</a>メンバーの面々</div>
-
-	<!-- / left --></div>
-
-	<!-- Main -->
-	<div id="main">
-	<h4>大江戸Ruby会議01について</h4>
-	<p><a href="http://www.rubyworld-conf.org/ja/news/20100902-a9-session/">地域Rubyist集団</a>Asakusa.rbが<a href="http://qwik.jp/asakusarb/Meetup.html">meetup</a>のだいたい100回を記念して、うららかな春の昼下がりの東京下町で地域Ruby会議を開催します。大江戸Ruby会議01は東京で6回目の地域Ruby会議です。
-	</p>
-
-	<h4>開催概要</h4> 
-	<dl> 
-	<dd>日時</dd>
-	<dt>2011-04-10(日) 13:25 - 16:30頃(13:10開場予定)</dt> 
-	<dd>会場</dd>
-	<dt><strong>深川江戸資料館レクホール</strong>(都営大江戸線清澄白河駅徒歩3分) <a href="http://www.kcf.or.jp/fukagawa/map.html">交通案内</a></dt> 
-	<dd>参加費用</dd>
-	<dt><strong>お代は見てのお帰り</strong>の予定<br>
-	任意の金額をお支払いください。RubyKaigi2010という国際的なカンファレンスは3日間通しで6,000円でした。</dt> 
-	<dd>定員</dd>
-	<dt>80名程度の規模を予定</dt> 
-	<dd>インターネットと電源</dd>
-	<dt>地下なので電波がきびしいかも。電源は提供できるかまだわからないです。</dt> 
-	<dd>Ustream中継</dd>
-	<dt>やれたらやる</dt> 
-	</dl> 
-	<h4>タイムテーブル</h4> 
-	<p>セッションの概要や時間帯は調整中です。</p> 
-	<ul> 
-	<li>基調講演: @a_matsuda</li> 
-	<li>招待講演: @_ko1</li> 
-	<li>Ninja Talks: @nahi, @yamaz, @emorima, @hsbt, @ukstudio, @hotchpotch</li> 
-	</ul> 
-	<h4>懇親会</h4> 
-	<p>やるつもりです。詳細は决まり次第、告知します。</p> 
-	</div>
-
-<!-- / container --></div>
-
-<!-- / wapper --></div>
-
-</body>
-</html>
+            <h3>準備と運営</h3>
+            <div class="menu">
+            <a href="http://asakusa.rubyist.net/">Asakusa.rb</a>メンバーの面々</div>
+        -# Main
+        %div#main
+          = render_hiki(@event.desc)
