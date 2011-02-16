@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+/* Reset */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p {
+margin: 0px;
+padding: 0px;
+font-size:100%;
+}
+
+/* Common */
+
+html, body {
+margin: 0; 
+padding: 0;
+}
+
+body {
+font-size:75%;
+line-height: 1.8;
+font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'メイリオ',Meiryo,'ＭＳＰゴシック',sans-serif;
+background-image: url(/images/nagoya02/bg01.png);
+color: #FFFFFF;
+}
+
+ul,ol,dl {
+list-style: none;
+}
+
+img {
+border: 0px;
+vertical-align: bottom;
+}
+
+a {
+color: #00CC00;
+border: none;
+text-decoration: underline;
+}
+
+a:hover {
+color: #DD0000;
+border: none;
+text-decoration: underline;
+}
+
+.clear {
+clear: both;
+}
+
+.hidden {
+text-indent: -9999px;
+height: 1px;
+}
+
+div#wrapper {
+background-image: url(/images/nagoya02/logo_bg01.jpg);
+background-repeat: repeat-x;
+background-position: top;
+}
+
+div#container {
+width: 960px;
+margin: 0px auto;
+}
+
+div#headerNav {
+height: 24px;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.9);
+-webkit-box-shadow: 0px 0px 12px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 0px 12px rgba(0,0,0,0.4);
+position: relative;
+}
+
+div#headerNav a {
+color: #DD0000;
+}
+
+div#headerNav p.regional {
+position: absolute;
+left: 8px;
+}
+
+div#headerNav p.login {
+position: absolute;
+right: 8px;
+}
+
+div#header {
+width: 960px;
+height: 378px;
+margin-left: 12px;
+margin-right: 12px;
+background-image: url(/images/nagoya02/logo_bg02.jpg);
+background-repeat: no-repeat;
+position: relative;
+}
+
+div#header h1 {
+position: absolute;
+top: 23px;
+left: 0px;
+}
+
+div#header p {
+width: 441px;
+height: 70px;
+position: absolute;
+bottom: 8px;
+right: 0px;
+}
+
+/*
+div#header ul li:hover {
+background-image: url(/images/nagoya02/headerGlobMenu_base02.png);
+}
+*/
+
+div#main {
+width: 920px;
+padding: 20px;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.9);
+margin: 12px;
+margin-top: 0px;
+-webkit-box-shadow: 0px 0px 12px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 0px 12px rgba(0,0,0,0.4);
+}
+
+div#contents {
+width: 666px;
+float: left;
+margin-bottom: 20px;
+margin-right: 20px;
+}
+
+div#contents h2 {
+width: 666px;
+height: 32px;
+margin-bottom: 20px;
+text-align: center;
+line-height: 32px;
+vertical-align: middle;
+color: #FFFFFF;
+background-image: url(/images/nagoya02/title_bg01.png);
+clear: both;
+}
+
+div#summary  {
+width: 666px;
+margin-bottom: 40px;
+}
+
+div#summary dl dt {
+width: 123px;
+height: 27px;
+margin-right: 20px;
+margin-bottom: 20px;
+float: left;
+line-height: 27px;
+text-align: center;
+vertical-align: middle;
+background-image: url(/images/nagoya02/title_bg02.png);
+}
+
+div#summary dl dd {
+width: 523px;
+height: 27px;
+line-height: 27px;
+margin-bottom: 20px;
+vertical-align: middle;
+float: left;
+}
+
+div#access {
+width: 666px;
+margin-bottom: 40px;
+}
+
+div#access p#map  {
+width: 300px;
+height: 300px;
+float: left;
+margin-right: 20px;
+}
+
+div#access dl#location  {
+width: 346px;
+float: left;
+margin-bottom: 40px;
+}
+
+div#program {
+width: 666px;
+margin-bottom: 40px;
+}
+
+div#program h3 {
+color: #00CC00;
+clear: both;
+margin-top: 20px;
+}
+
+div#program dl {
+margin-left: 20px;
+}
+
+div#program dl dd {
+margin-left: 20px;
+}
+
+div#program p {
+margin-left: 20px;
+}
+
+div#event p {
+margin-left: 20px;
+}
+
+div#party dd {
+margin-left: 20px;
+}
+
+div#Nav {
+width: 234px;
+float: left;
+}
+
+div#Nav h2 {
+width: 234px;
+height: 32px;
+margin-bottom: 20px;
+text-align: center;
+line-height: 32px;
+vertical-align: middle;
+color: #FFFFFF;
+background-color: #CC0000;
+}
+
+div#Nav div#stuff,div#speaker,div#twitter {
+margin-bottom: 40px;
+clear: both;
+}
+
+div#Nav dt {
+margin-top: 20px;
+}
+
+div#Nav dd {
+margin-left: 20px;
+}
+
+div#contact {
+margin: 12px;
+margin-top: 40px;
+}
+
+div#contact h2 {
+width: 234px;
+height: 32px;
+margin-bottom: 20px;
+text-align: center;
+line-height: 32px;
+vertical-align: middle;
+color: #FFFFFF;
+background-color: #CC0000;
+}
+
+div#footer {
+padding: 20px;
+margin-top: 40px;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.9);
+-webkit-box-shadow: 0px 0px 12px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 0px 12px rgba(0,0,0,0.4);
+}
+
+div#footer div#cooplist {
+width:920px;
+margin: 0px auto;
+}
+
+div#footer div.cooperative {
+width: 230px;
+float: left;
+}
+
+div#footer div.cooperative ul {
+margin-left: 20px;
+}
+
+div#footer p {
+margin: 20px;
+text-align: center;
+clear: both;
+}
+
+div#footer p a {
+color: #DD0000;
+}
+
+
+
