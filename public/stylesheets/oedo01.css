@@ -152,6 +152,13 @@ div#main	{
 	color: #000;
 }
 
+#main h5 {
+	margin: 12px 0 0 1.5em;
+	font-size: 14px;
+	font-style: bold;
+	color: #444;
+}
+
 #main p	{
 	padding: 0 20px;
 	line-height: 160%;
