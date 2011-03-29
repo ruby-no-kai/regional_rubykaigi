@@ -45,7 +45,6 @@ div#container	{
 	-webkit-box-shadow: 1px 2px 3px #777;
 }
 
-
 /* header */
 
 div#logo	{
@@ -186,4 +185,15 @@ div#main	{
 #main dd	{
 	padding-left: 15px;
 	margin: 0 0 10px 0;
+}
+
+.registration_link {
+	border-radius: 4px;
+	-webkit-border-radius: 10px; /*safari,chrome用*/
+	-moz-border-radius: 10px; /*firefox用*/
+	text-align:center;
+	font-size:18px;
+	padding:12px 2px;
+	border: 2px solid #600;
+	margin-bottom:4px
 }
