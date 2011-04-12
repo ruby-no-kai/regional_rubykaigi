@@ -44,6 +44,9 @@ class EventsController < ApplicationController
     when "tokyo06", "oedorubykaigi01"
       redirect_to event_path(:action => 'show', :name => 'oedo01')
       return
+    when "tokyo07"
+      redirect_to event_path(:action => 'show', :name => 'tokyu03')
+      return
     end
 
     @event = Event.find_by_name(params[:name])
