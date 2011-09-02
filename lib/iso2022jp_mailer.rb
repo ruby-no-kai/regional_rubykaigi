@@ -16,12 +16,12 @@ class Iso2022jpMailer < ActionMailer::Base
     "=?#{charset}?B?#{text}?="
   end
 
-  def create_with_iso2022jp!(method_name, *parameters)
-    mail = create_without_iso2022jp!(method_name, *parameters)
-
-    mail.body = NKF::nkf('-j', mail.body)
+  def mail_with_iso2022jp(headers = {}, &block)
+    mail = mail_without_iso2022jp(headers, &block)
+    mail.body = NKF.nkf('-j', mail.body.raw_source)
+    mail.charset = 'ISO-2022-JP'
     mail
   end
 
-  alias_method_chain :create!, :iso2022jp
+  alias_method_chain :mail, :iso2022jp
 end
