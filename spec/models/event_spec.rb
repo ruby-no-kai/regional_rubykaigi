@@ -88,7 +88,7 @@ describe Event, "for toppage" do
     Event.instance_eval do
       class << self
         def create_without_validation(options)
-          returning(Event.new(options)){ |e| e.save(false)}
+          Event.new(options).tap { |e| e.save(false)}
         end
       end
     end
