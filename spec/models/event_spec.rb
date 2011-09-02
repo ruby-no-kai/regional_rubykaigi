@@ -156,8 +156,8 @@ describe Event, "for toppage" do
     end
 
     it { @archives.size.should == 2 }
-    it { @archives[0].name.should == "rubykaigi2008" }
-    it { @archives[1].name.should == "tokyo01" }
+    it { @archives[0].name.should == "tokyo01" }
+    it { @archives[1].name.should == "rubykaigi2008" }
   end
 end
 
