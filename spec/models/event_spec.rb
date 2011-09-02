@@ -92,8 +92,9 @@ describe Event, "for toppage" do
         end
       end
     end
-    Event.delete_all
+  end
 
+  before(:each) do
     Event.create_without_validation(:name => 'rubykaigi2008',
       :title => 'RubyKaigi2008', :capacity => 800,
       :start_on => Date.parse("2008-06-20"),
@@ -129,9 +130,7 @@ describe Event, "for toppage" do
       :start_on => Date.parse("2008-09-17"),
       :end_on => Date.parse("2008-09-17"),
       :publish_at => DateTime.parse("2008-11-30 12:00:00"))
-  end
 
-  before(:each) do
     Date.stub!(:today).and_return(Date.parse("2008-09-17"))
     DateTime.stub!(:now).and_return(DateTime.parse("2008-09-17 15:00:00"))
   end
