@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
 describe Event, "#under_capacity?" do
   before do
@@ -88,7 +88,7 @@ describe Event, "for toppage" do
     Event.instance_eval do
       class << self
         def create_without_validation(options)
-          Event.new(options).tap { |e| e.save(false)}
+          Event.new(options).tap { |e| e.save(:validate => false)}
         end
       end
     end
