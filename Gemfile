@@ -2,7 +2,7 @@
 source :rubygems
 source 'http://gems.github.com'
 
-gem 'rails', '2.3.10', :require => nil
+gem 'rails', '3.1.0', :require => nil
 gem 'haml'
 gem 'ruby-openid', :require => 'openid'
 gem 'sqlite3-ruby'
