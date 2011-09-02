@@ -5,8 +5,8 @@ describe EventsController do
 
   describe "#fetch_event" do
     specify do
-      get :name => "no_such_kaigi"
-      response.status.should == "404 Not Found"
+      get 'show', :name => "no_such_kaigi"
+      response.status.should == 404
     end
   end
 
