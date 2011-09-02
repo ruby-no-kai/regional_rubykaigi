@@ -2,12 +2,12 @@
 class Event < ActiveRecord::Base
   has_many :attendees
 
-  named_scope :upcomings, lambda {
+  scope :upcomings, lambda {
     {:conditions => ["force_disabled = ? and start_on >= ?",
         false, Date.today],
       :order => "start_on DESC"}
   }
-  named_scope :archives, lambda {
+  scope :archives, lambda {
     {:conditions => ["force_disabled = ? and publish_at <= ? and end_on < ?",
         false, DateTime.now, Date.today],
      :order => "end_on DESC"}
