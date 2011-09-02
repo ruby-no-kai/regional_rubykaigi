@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
-source :rubygems
+source 'http://rubygems.org'
 source 'http://gems.github.com'
 
-gem 'rails', '3.1.0', :require => nil
-gem 'haml'
+gem 'rails', '3.1.0'
+gem 'sqlite3'
+gem 'jquery-rails'
 gem 'ruby-openid', :require => 'openid'
-gem 'sqlite3-ruby'
-gem 'rspec'
+gem 'capistrano'
 
-group :development do
+group :development, :test do
   gem 'thin', :require => nil
-  gem 'capistrano', :require => nil
-end
-
-group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails' 
   gem 'factory_girl'
   gem 'database_cleaner'
 end
