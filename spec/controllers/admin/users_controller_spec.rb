@@ -14,7 +14,7 @@ describe Admin::UsersController do
       get 'index'
     end
 
-    it { response.status.should == '200 OK' }
+    it { response.status.should == 200 }
   end
 
   describe 'GET /edit' do
@@ -22,7 +22,7 @@ describe Admin::UsersController do
       get 'edit', :id => @admin_user.id
     end
 
-    it { response.status.should == '200 OK' }
+    it { response.status.should == 200 }
   end
 
   describe 'POST /update' do

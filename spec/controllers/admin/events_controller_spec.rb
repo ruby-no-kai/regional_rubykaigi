@@ -14,7 +14,7 @@ describe Admin::EventsController do
       get 'index'
     end
 
-    it { response.status.should == '200 OK' }
+    it { response.status.should == 200 }
   end
 
   describe 'GET /show' do
@@ -22,7 +22,7 @@ describe Admin::EventsController do
       get 'show', :id => @event.id
     end
 
-    it { response.status.should == '200 OK' }
+    it { response.status.should == 200 }
   end
 
   describe 'GET /edit' do
@@ -30,6 +30,6 @@ describe Admin::EventsController do
       get 'edit', :id => @event.id
     end
 
-    it { response.status.should == '200 OK' }
+    it { response.status.should == 200 }
   end
 end
