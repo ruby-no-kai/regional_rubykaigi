@@ -12,7 +12,7 @@
     / IE 6 hacks
     /[if lt IE 7]
       = stylesheet_link_tag "simplemodal_ie", :media => :screen
-    = javascript_include_tag ["jquery", "jquery-ui", "jrails", "application"]
+    = javascript_include_tag "jquery", "jquery-ui", "application"
     = javascript_include_tag "jquery.simplemodal-1.1.1.pack"
     = javascript_include_tag "login_dialog"
     = yield :javascript
