@@ -9,13 +9,19 @@ describe 'events/show.html.haml' do
 
     context '会議の説明がある場合' do
       before do
-        assign(:event, Factory.create(:tokyo01, :desc => 'blah blah blah'))
+        assign(:event, Factory.create(:tokyo01, :desc => "!blah\nblah blah"))
 
         render
       end
 
+      subject { Nokogiri.HTML(rendered).at_css('div.event_desc') }
+
       it '説明を表示する' do
-        rendered.should have_selector('div.event_desc')
+        should_not be_nil
+      end
+
+      it 'hikidocの結果をHTMLエスケープしない' do
+        subject.inner_html.should match(/^\<h3\>/)
       end
     end
 
@@ -24,7 +30,7 @@ describe 'events/show.html.haml' do
         assign(:event, Factory.create(:tokyo01, :desc => nil))
       end
 
-      it '説明を表示しない' do
+      it 'エラーにならず何も表示しない' do
         lambda {
           render
 
