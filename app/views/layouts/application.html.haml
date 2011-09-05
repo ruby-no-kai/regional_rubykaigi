@@ -23,7 +23,7 @@
 
     %div{:style => "background: #000"}
       %div{:style => "width: 90%; margin: 0 auto"}
-        = link_to "Regional RubyKaigi", root_path, :class => "regional_rubykaigi"
+        = link_to "Regional RubyKaigi", url_for('/'), :class => "regional_rubykaigi"
 
     #wrapper
       #container
@@ -32,7 +32,7 @@
 
     %div{:style => "background: #000"}
       %div{:style => "width:90%; margin:0 auto; text-align:right"}
-        = link_to "Regional RubyKaigi", root_path, :class => "regional_rubykaigi"
+        = link_to "Regional RubyKaigi", url_for('/'), :class => "regional_rubykaigi"
 
     :javascript
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
