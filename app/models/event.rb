@@ -32,7 +32,8 @@ class Event < ActiveRecord::Base
   end
 
   def published?
-    publish_at <= DateTime.now
+    # TODO: validate_presence_of :publish_at
+    publish_at && publish_at <= DateTime.now
   end
 
   def single_day?

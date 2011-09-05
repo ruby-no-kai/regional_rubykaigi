@@ -81,6 +81,13 @@ describe Event, "#published?" do
 
     it { @event.should be_published }
   end
+
+  describe 'publish_atがnilの場合' do
+    before do
+      @event.publish_at = nil
+    end
+    it { @event.should_not be_published }
+  end
 end
 
 describe Event, "for toppage" do
