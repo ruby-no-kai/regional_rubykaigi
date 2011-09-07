@@ -1,0 +1,136 @@
+body {
+	font-family: Verdana, sans-serif;
+	margin: 0;
+	background-color: #F0E68C;
+}
+
+div#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+div#container {
+	width: 953px;
+	margin: 0;
+	display: -webkit-box;
+	display: -moz-box;
+}
+
+#user-bar {
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #ea1212;
+	color: #fff;
+	font-size: 80%;
+}
+
+#user-bar a {
+	color: #F0E68C;
+	text-decoration: none;
+}
+
+div#left {
+	background: url(/images/kansai04/side_l2.png) repeat-y;
+	width: 162px;
+	margin: 0;
+}
+
+div#center {
+	width: 606px;
+}
+
+div#top {
+	background: url(/images/kansai04/top2.png) no-repeat;
+	margin: 0;
+	padding: 0;
+	height: 364px;
+}
+
+div#main {
+	padding: 5px;
+	color: #1a1516;
+	font-size: 16px;
+}
+
+div#right {
+	background: url(/images/kansai04/side_r2.png) repeat-y;
+	width: 162px;
+	margin: 0;
+}
+
+#main h3 {
+	background: -webkit-gradient(linear, left top, right top, from(#F0E68C), color-stop(0.5, #ea1212), to(#ea1212));
+	background: -moz-linear-gradient(top left, #F0E68C, #ea1212, #ea1212);
+	height: 30px;
+	padding: 7px 0 0 20px;
+	margin: 15px 0 0 0;
+	font-size: 20px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px 30px 0 0;
+	-moz-border-radius: 30px 30px 0 0;
+}
+}
+
+#main h4 {
+	margin: 12px 0 0 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#main h5 {
+	background: -webkit-gradient(linear, left top, right top, from(#F0E68C), color-stop(0.5, #ea1212), to(#ea1212));
+	background: -moz-linear-gradient(top left, #F0E68C, #ea1212, #ea1212);
+	padding: 0 0 0 7px;
+	margin: 12px 0 0 0;
+	font-size: 14px;
+	border-radius: 14px;
+	-webkit-border-radius: 14px 14px 0 0;
+	-moz-border-radius: 14px 14px 0 0;
+}
+
+div#map {
+	min-height: 240px;
+	width: 80%;
+	margin: auto;
+}
+
+#main a {
+	color: #1a1516;
+}
+
+#main a:hover {
+	color: #ea1212;
+	text-decoration: underline;
+}
+
+#main ul {
+	list-style-type: disc;
+	padding-right: 10px;
+	line-height: 160%;
+}
+
+#main dl {
+	padding: 0 20px;
+	line-height: 160%;
+}
+
+#main dt {
+	margin: 0;
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+#main dd {
+	padding-left: 15px;
+	margin-left: 50px;
+}
+
+#footer {
+	background: -webkit-gradient(linear, left top, right top, from(#F0E68C), color-stop(0.5, #ea1212), to(#F0E68C));
+	background: -moz-linear-gradient(top left, #F0E68C, #ea1212, #F0E68C);
+	text-align: center;
+	color: #1a1516;
+	font-weight: bold;
+}
