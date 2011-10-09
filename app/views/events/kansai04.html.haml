@@ -5,7 +5,7 @@
     %meta{"http-equiv" => "Content-Type", :content => "text/xhtml; charset=utf-8"}
     %title 関西Ruby会議04 - Regional RubyKaigi
     != stylesheet_link_tag "kansai04"
-    %style @media print {div#user-bar {display: none}}
+    %style{:type => "text/css"} <!-- @media print {div#user-bar {display: none}} -->
     != javascript_include_tag "jquery.js"
     %meta{:name => "viewport", :content => "initial-scale=1.0, user-scalable=no"}
     <!-- GoogleMapsApi -->
