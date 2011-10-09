@@ -33,7 +33,7 @@ div#container {
 }
 
 div#top {
-	background: url(/images/kansai04/top2.png) no-repeat;
+	background: url(/images/kansai04/top.png) no-repeat;
 	margin: 0;
 	padding: 0;
 	display: block;
@@ -42,7 +42,7 @@ div#top {
 }
 
 div#left {
-	background: url(/images/kansai04/side_l2.png) repeat-y;
+	background: url(/images/kansai04/side_l.png) repeat-y;
 	width: 192px;
 	margin: 0;
 }
@@ -62,7 +62,7 @@ div#main {
 }
 
 div#right {
-	background: url(/images/kansai04/side_r2.png) repeat-y;
+	background: url(/images/kansai04/side_r.png) repeat-y;
 	width: 192px;
 	margin: 0;
 }
