@@ -13,6 +13,8 @@
     %script{:type => "text/javascript"}
     :javascript
       $(document).ready(function(){
+        var height = $("#container")[0].scrollHeight;
+        $("#container").height(height + (192 - (height % 192 || 192)));
         with(google.maps){
           var pos = new LatLng(34.63827, 135.411279);
           var map = new Map(document.getElementById("map"), {
