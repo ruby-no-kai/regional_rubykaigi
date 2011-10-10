@@ -91,6 +91,11 @@ div#right {
 	font-size: 14px;
 }
 
+table#badges {
+	width: 500px;
+	margin: auto;
+}
+
 div#map {
 	min-height: 240px;
 	margin: auto;

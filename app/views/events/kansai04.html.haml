@@ -37,6 +37,21 @@
         %div#center
           %div#main
             = render_hiki(@event.desc)
+            %div#goodies
+              %h3 おまけ
+              %h5 バッジ(さらに入荷予定です！)
+              %table#badges
+                %tr
+                  %th 一般参加用
+                  %th スピーカー用
+                  %th スタッフ用
+                %tr
+                  %td
+                    %img{:src => "/images/kansai04/attendee.png"}
+                  %td
+                    %img{:src => "/images/kansai04/speaker.png"}
+                  %td
+                    %img{:src => "/images/kansai04/staff.png"}
             %div#access
               %h3 Map
               %div#map
