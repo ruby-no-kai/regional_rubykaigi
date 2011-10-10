@@ -96,6 +96,11 @@ table#badges {
 	margin: auto;
 }
 
+div#font-acknowledgment {
+	text-align: center;
+	font-size: 14px;
+}
+
 div#map {
 	min-height: 240px;
 	margin: 0 10px;
