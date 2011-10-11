@@ -11,6 +11,7 @@ gem 'rspec'
 group :development do
   gem 'thin', :require => nil
   gem 'capistrano', :require => nil
+  gem 'capistrano_colors'
 end
 
 group :test do
