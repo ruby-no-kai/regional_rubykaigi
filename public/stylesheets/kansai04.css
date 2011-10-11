@@ -100,6 +100,10 @@ table#badges ul {
 	padding: 5px 0;
 }
 
+table#badges img.badges {
+	height: 256px;
+}
+
 table#badges li {
 	list-style: none;
 	text-align: center;
