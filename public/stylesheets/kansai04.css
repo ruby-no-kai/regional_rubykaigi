@@ -96,6 +96,10 @@ table#badges {
 	margin: auto;
 }
 
+table#badges ul {
+	padding: 5px 0;
+}
+
 table#badges li {
 	list-style: none;
 	text-align: center;
@@ -127,7 +131,7 @@ table#badges ul.staff li a:hover {
 
 div#font-acknowledgment {
 	text-align: center;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 div#map {
