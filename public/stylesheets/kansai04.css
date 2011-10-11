@@ -96,6 +96,35 @@ table#badges {
 	margin: auto;
 }
 
+table#badges li {
+	list-style: none;
+	text-align: center;
+}
+
+table#badges li a:link {
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+}
+
+table#badges li a:hover {
+	color: #fcfcf0;
+	font-weight: bold;
+}
+
+table#badges ul.attendee li a:hover {
+	background-color: #318693;
+}
+
+table#badges ul.speaker li a:hover {
+	background-color: #ea1212;
+}
+
+table#badges ul.staff li a:hover {
+	background-color: #1a1516;
+}
+
 div#font-acknowledgment {
 	text-align: center;
 	font-size: 14px;
