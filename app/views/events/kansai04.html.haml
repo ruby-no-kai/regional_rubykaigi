@@ -13,6 +13,8 @@
     %script{:type => "text/javascript"}
     :javascript
       $(document).ready(function(){
+        var height = $("#container")[0].scrollHeight;
+        $("#container").height(height + (192 - (height % 192 || 192)));
         with(google.maps){
           var pos = new LatLng(34.63827, 135.411279);
           var map = new Map(document.getElementById("map"), {
@@ -39,7 +41,8 @@
             = render_hiki(@event.desc)
             %div#goodies
               %h3 おまけ
-              %h5 バッジ(さらに入荷予定です！)
+              %h5 バッジ
+              %p 以下の一覧からお好きなアイコンのバッジをお選びください。
               %table#badges
                 %tr
                   %th 一般参加者用
@@ -47,11 +50,104 @@
                   %th スタッフ用
                 %tr
                   %td
-                    %img{:src => "/images/kansai04/attendee_taiyou.png"}
+                    %img.badges{:src => "/images/kansai04/attendee_taiyou.png"}
+                    %ul.attendee
+                      %li
+                        %a{:href => "/images/kansai04/attendee_kyoto_tower.png"}京都タワー
+                      %li
+                        %a{:href => "/images/kansai04/attendee_ise.png"}伊勢
+                      %li
+                        %a{:href => "/images/kansai04/attendee_maiko.png"}舞妓
+                      %li
+                        %a{:href => "/images/kansai04/attendee_port_tower.png"}ポートタワー
+                      %li
+                        %a{:href => "/images/kansai04/attendee_biwako.png"}琵琶湖
+                      %li
+                        %a{:href => "/images/kansai04/attendee_panda.png"}パンダ
+                      %li
+                        %a{:href => "/images/kansai04/attendee_konamon.png"}粉もん
+                      %li
+                        %a{:href => "/images/kansai04/attendee_mikan.png"}みかん
+                      %li
+                        %a{:href => "/images/kansai04/attendee_tsutenkaku.png"}通天閣
+                      %li
+                        %a{:href => "/images/kansai04/attendee_shika.png"}鹿
+                      %li
+                        %a{:href => "/images/kansai04/attendee_taiyou.png"}太陽の塔
+                      %li
+                        %a{:href => "/images/kansai04/attendee_daibutsu.png"}大仏
+                      %li
+                        %a{:href => "/images/kansai04/attendee_tako.png"}蛸
+                      %li
+                        %a{:href => "/images/kansai04/attendee_daimonji.png"}大文字
+                      %li
+                        %a{:href => "/images/kansai04/attendee_hikone.png"}彦根
                   %td
-                    %img{:src => "/images/kansai04/speaker_shika.png"}
+                    %img.badges{:src => "/images/kansai04/speaker_shika.png"}
+                    %ul.speaker
+                      %li
+                        %a{:href => "/images/kansai04/speaker_kyoto_tower.png"}京都タワー
+                      %li
+                        %a{:href => "/images/kansai04/speaker_ise.png"}伊勢
+                      %li
+                        %a{:href => "/images/kansai04/speaker_maiko.png"}舞妓
+                      %li
+                        %a{:href => "/images/kansai04/speaker_port_tower.png"}ポートタワー
+                      %li
+                        %a{:href => "/images/kansai04/speaker_biwako.png"}琵琶湖
+                      %li
+                        %a{:href => "/images/kansai04/speaker_panda.png"}パンダ
+                      %li
+                        %a{:href => "/images/kansai04/speaker_konamon.png"}粉もん
+                      %li
+                        %a{:href => "/images/kansai04/speaker_mikan.png"}みかん
+                      %li
+                        %a{:href => "/images/kansai04/speaker_tsutenkaku.png"}通天閣
+                      %li
+                        %a{:href => "/images/kansai04/speaker_shika.png"}鹿
+                      %li
+                        %a{:href => "/images/kansai04/speaker_taiyou.png"}太陽の塔
+                      %li
+                        %a{:href => "/images/kansai04/speaker_daibutsu.png"}大仏
+                      %li
+                        %a{:href => "/images/kansai04/speaker_tako.png"}蛸
+                      %li
+                        %a{:href => "/images/kansai04/speaker_daimonji.png"}大文字
+                      %li
+                        %a{:href => "/images/kansai04/speaker_hikone.png"}彦根
                   %td
-                    %img{:src => "/images/kansai04/staff_daibutsu.png"}
+                    %img.badges{:src => "/images/kansai04/staff_daibutsu.png"}
+                    %ul.staff
+                      %li
+                        %a{:href => "/images/kansai04/staff_kyoto_tower.png"}京都タワー
+                      %li
+                        %a{:href => "/images/kansai04/staff_ise.png"}伊勢
+                      %li
+                        %a{:href => "/images/kansai04/staff_maiko.png"}舞妓
+                      %li
+                        %a{:href => "/images/kansai04/staff_port_tower.png"}ポートタワー
+                      %li
+                        %a{:href => "/images/kansai04/staff_biwako.png"}琵琶湖
+                      %li
+                        %a{:href => "/images/kansai04/staff_panda.png"}パンダ
+                      %li
+                        %a{:href => "/images/kansai04/staff_konamon.png"}粉もん
+                      %li
+                        %a{:href => "/images/kansai04/staff_mikan.png"}みかん
+                      %li
+                        %a{:href => "/images/kansai04/staff_tsutenkaku.png"}通天閣
+                      %li
+                        %a{:href => "/images/kansai04/staff_shika.png"}鹿
+                      %li
+                        %a{:href => "/images/kansai04/staff_taiyou.png"}太陽の塔
+                      %li
+                        %a{:href => "/images/kansai04/staff_daibutsu.png"}大仏
+                      %li
+                        %a{:href => "/images/kansai04/staff_tako.png"}蛸
+                      %li
+                        %a{:href => "/images/kansai04/staff_daimonji.png"}大文字
+                      %li
+                        %a{:href => "/images/kansai04/staff_hikone.png"}彦根
               %div#font-acknowledgment
                 バッジの参加者種別の書体は、
                 %a{:href => "http://yozvox.web.infoseek.co.jp/96D1954D94C5.html"}Y.OzFont毛筆版
