@@ -14,3 +14,9 @@ Factory.define :kansai01, :class => Event do |e|
   e.start_on Date.parse('2008-11-07')
   e.end_on Date.parse('2008-11-08')
 end
+
+Factory.define :admin_user, :class => User do |u|
+  u.login 'admin'
+  u.identity_url 'http://test.local/identity/admin'
+  u.admin true
+end
