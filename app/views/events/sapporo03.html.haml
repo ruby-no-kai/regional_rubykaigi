@@ -12,7 +12,7 @@
     %meta{:"http-equiv" => "cache-control", :content => "no-cache"}
     %meta{:name => "keywords", :content => "札幌, Ruby, 会議, Kaigi, 03"}
     %meta{:name => "description", :content => "札幌Ruby会議03の公式サイト。プログラムや参加登録のご案内など。"}
-    %link{:href => "/stylesheets/sapporo03.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+    = stylesheet_link_tag 'sapporo03.css'
     %title 札幌Ruby会議03 - Regional RubyKaigi
   %body
     #container.main
@@ -116,7 +116,7 @@
             %img{:alt => 'FOR ATTENDEES', :src =>'/images/sapporo03/forattendees_head.png', :width => "350", :height => "50"}
           %h3
             名札について
-          .text       
+          .text
             %p.f_right
               %img{:alt => '', :src => '/images/sapporo03/nametag.png', :width => "110", :height => "86"}
             %p
