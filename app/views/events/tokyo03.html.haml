@@ -14,13 +14,12 @@
     %meta{:name => "keywords", :content => "東京, Ruby, 会議, Kaigi, 03"}
     %meta{:name => "description", :content => "東京Ruby会議03の公式サイト。プログラムや参加登録のご案内など。"}
     %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools-yui-compressed.js'}
-    %script{:type => 'text/javascript', :src => '/sexylightbox/sexylightbox.v2.3.mootools.js'}
+    != javascript_include_tag 'tokyo03/sexylightbox.v2.3.mootools.min'
     :javascript
       window.addEvent('domready', function(){
         SexyLightbox = new SexyLightBox({color:'white'});
       });
-    %link{:href => "/sexylightbox/sexylightbox.css", :rel => 'stylesheet', :type => "text/css", :media => "all"}
-    %link{:href => "/stylesheets/tokyo03.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+    != stylesheet_link_tag "tokyo03"
     %title 東京Ruby会議03 - Regional RubyKaigi
   %body
     #container.main

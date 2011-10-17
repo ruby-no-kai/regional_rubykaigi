@@ -1,12 +1,13 @@
-!!! Strict
+-# -*- coding: utf-8 -*-
+!!!5
 
-%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+%html
   %head
-    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
-    %meta{"http-equiv" => "Content-Style-Type", :content => "text/css"}
-    = stylesheet_link_tag "application"
+    %meta(charset="utf-8")
+    %link{ :href => "/favicon.ico", :rel => "icon" }
+    != stylesheet_link_tag "application"
     = yield :css
-    = javascript_include_tag :defaults
+    != javascript_include_tag "application"
     = yield :javascript
     %title Admin
 
