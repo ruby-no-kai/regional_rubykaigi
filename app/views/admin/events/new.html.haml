@@ -1,7 +1,10 @@
 %h2 新しく地域Ruby会議を開催する
 
 - form_for(@event, :url => {:action => "create"}) do |f|
-  = f.error_messages
+  - if @event.errors.any?
+    <ul>
+    - @event.errors.full_messages.each do |msg|
+      %li= msg
   = render :partial => "form",:locals => {:form => f}
   %p= f.submit "Create"
 

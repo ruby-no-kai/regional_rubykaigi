@@ -2,7 +2,10 @@
   参加登録:
   &= @event.title
 
-= error_messages_for :attendee
+- if @event.errors.any?
+  <ul>
+  - @event.errors.full_messages.each do |msg|
+    %li= msg
 
 - form_for @attendee, :url => {:action => 'register'}, :method => :post do |f|
   %table
