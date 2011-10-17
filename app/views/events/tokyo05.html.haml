@@ -9,9 +9,7 @@
     - if @event.css.present?
       %style{:type => "text/css"}= @event.css
     = yield :stylesheet
-    = javascript_include_tag ["jquery", "jquery-ui", "jrails", "application"]
-    = javascript_include_tag "jquery.simplemodal-1.1.1.pack"
-    = javascript_include_tag "login_dialog"
+    = javascript_include_tag 'application'
     = yield :javascript
     %title&= page_title
 
@@ -137,13 +135,13 @@
 
           %h4
             %a{:href => "http://camobile.com"} 株式会社シーエー・モバイル / CA MOBILE, LTD.
-          
+
           %p
             = image_tag "tokyo05/camobile.png"
-            
+
           %h4
             %a{:href => "http://everyleaf.com"} 株式会社万葉 / Everyleaf Corporation
-          
+
           %p
             = image_tag "tokyo05/everyleaf.png"
 
