@@ -1,6 +1,6 @@
 %h2 新しく地域Ruby会議を開催する
 
-- form_for(@event, :url => {:action => "create"}) do |f|
+= form_for(@event, :url => {:action => "create"}) do |f|
   - if @event.errors.any?
     <ul>
     - @event.errors.full_messages.each do |msg|
