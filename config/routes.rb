@@ -1,4 +1,6 @@
 RegionalRubykaigi::Application.routes.draw do
+  root :to => 'events#index'
+
   match '/logout' => 'sessions#destroy', :as => :logout
   match '/login' => 'sessions#new', :as => :login
 
