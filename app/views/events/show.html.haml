@@ -36,4 +36,4 @@
 
 - if @event.css.present?
   = content_for :stylesheet do
-    %style{:type => "text/css"}= @event.css
+    %style{:type => "text/css"}= raw(@event.css)
