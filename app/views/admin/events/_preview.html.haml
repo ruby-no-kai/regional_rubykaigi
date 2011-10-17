@@ -3,8 +3,9 @@
     :url => {:controller => "admin/events", :action => "preview", :id => @event.id},
     :update => 'preview',
     :submit => "edit_event",
-    :method => :put
+    :method => :put,
+    :remote => true
   }
 
-= link_to_remote('Preview', preview_opts)
+= link_to('Preview', preview_opts)
 #preview{:style => "padding:1em;border:1px solid #ccc;"}
