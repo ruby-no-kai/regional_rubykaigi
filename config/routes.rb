@@ -20,7 +20,7 @@ RegionalRubykaigi::Application.routes.draw do
 
   match '/' => 'events#index'
 
-  match ':name/:action' => 'events#show', :as => :event, :constraints => { :name => /[a-z]+\d+/ }
+  match ':name(/:action)' => 'events#show', :as => :event, :constraints => { :name => /[a-z]+\d+/ }
 
   match '/:controller(/:action(/:id))'
 end
