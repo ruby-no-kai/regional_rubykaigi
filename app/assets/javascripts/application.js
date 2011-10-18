@@ -5,4 +5,4 @@
 // the compiled file.
 //= require jquery
 //= require jquery-ui
-//= login_dialog
+//= require login_dialog
