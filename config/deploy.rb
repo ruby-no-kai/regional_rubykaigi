@@ -73,3 +73,10 @@ namespace :bundler do
 end
 
 after 'deploy:finalize_update', 'bundler:bundle'
+
+namespace :db do
+  desc "get production.sqlite3 on regional.rubykaigi.org and save to localhost"
+  task :fetch_sqlite3 do
+    get "#{shared_path}/db/production.sqlite3", "db/production.sqlite3"
+  end
+end
