@@ -12,9 +12,7 @@
     / IE 6 hacks
     /[if lt IE 7]
       = stylesheet_link_tag "simplemodal_ie", :media => :screen
-    = javascript_include_tag ["jquery", "jquery-ui", "jrails", "application"]
-    = javascript_include_tag "jquery.simplemodal-1.1.1.pack"
-    = javascript_include_tag "login_dialog"
+    = javascript_include_tag "application"
     = yield :javascript
     %title&= page_title
 
@@ -23,7 +21,7 @@
 
     %div{:style => "background: #000"}
       %div{:style => "width: 90%; margin: 0 auto"}
-        = link_to "Regional RubyKaigi", root_path, :class => "regional_rubykaigi"
+        = link_to "Regional RubyKaigi", url_for('/'), :class => "regional_rubykaigi"
 
     #wrapper
       #container
@@ -32,7 +30,7 @@
 
     %div{:style => "background: #000"}
       %div{:style => "width:90%; margin:0 auto; text-align:right"}
-        = link_to "Regional RubyKaigi", root_path, :class => "regional_rubykaigi"
+        = link_to "Regional RubyKaigi", url_for('/'), :class => "regional_rubykaigi"
 
     :javascript
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

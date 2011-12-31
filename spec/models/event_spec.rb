@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
 describe Event, "#under_capacity?" do
   before do
@@ -81,6 +81,13 @@ describe Event, "#published?" do
 
     it { @event.should be_published }
   end
+
+  describe 'publish_atがnilの場合' do
+    before do
+      @event.publish_at = nil
+    end
+    it { @event.should_not be_published }
+  end
 end
 
 describe Event, "for toppage" do
@@ -88,12 +95,13 @@ describe Event, "for toppage" do
     Event.instance_eval do
       class << self
         def create_without_validation(options)
-          returning(Event.new(options)){ |e| e.save(false)}
+          Event.new(options).tap { |e| e.save(:validate => false)}
         end
       end
     end
-    Event.delete_all
+  end
 
+  before(:each) do
     Event.create_without_validation(:name => 'rubykaigi2008',
       :title => 'RubyKaigi2008', :capacity => 800,
       :start_on => Date.parse("2008-06-20"),
@@ -129,9 +137,7 @@ describe Event, "for toppage" do
       :start_on => Date.parse("2008-09-17"),
       :end_on => Date.parse("2008-09-17"),
       :publish_at => DateTime.parse("2008-11-30 12:00:00"))
-  end
 
-  before(:each) do
     Date.stub!(:today).and_return(Date.parse("2008-09-17"))
     DateTime.stub!(:now).and_return(DateTime.parse("2008-09-17 15:00:00"))
   end
@@ -156,8 +162,8 @@ describe Event, "for toppage" do
     end
 
     it { @archives.size.should == 2 }
-    it { @archives[0].name.should == "rubykaigi2008" }
-    it { @archives[1].name.should == "tokyo01" }
+    it { @archives[0].name.should == "tokyo01" }
+    it { @archives[1].name.should == "rubykaigi2008" }
   end
 end
 

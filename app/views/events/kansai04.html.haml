@@ -4,7 +4,9 @@
   %head
     %meta{"http-equiv" => "Content-Type", :content => "text/xhtml; charset=utf-8"}
     %title 関西Ruby会議04 - Regional RubyKaigi
-    != stylesheet_link_tag "kansai04"
+    -# 開催前の準備とRails3.1移行が並行して作業されているので、今はタグを手打ちしている
+    %link{:href => "/stylesheets/kansai04.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+    -# != stylesheet_link_tag "kansai04"
     %style{:type => "text/css"} <!-- @media print {div#user-bar {display: none}} -->
     != javascript_include_tag "jquery.js"
     %meta{:name => "viewport", :content => "initial-scale=1.0, user-scalable=no"}

@@ -1,7 +1,10 @@
 %h1 New user
 
-- form_for(@user, :url => {:action => 'create'}) do |f|
-  = f.error_messages
+= form_for(@user, :url => {:action => 'create'}) do |f|
+  - if @event.errors.any?
+    <ul>
+    - @event.errors.full_messages.each do |msg|
+      %li= msg
   = render :partial => 'form', :locals => {:form => f}
   %p= f.submit "Create"
 

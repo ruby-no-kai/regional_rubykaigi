@@ -2,7 +2,7 @@
 module EventsHelper
   def render_registration_link(outer = :div)
     if @event.use_builtin_registration?
-      content_tag outer, :class => "registration_link" do
+      content_tag outer, {:class => "registration_link"}, false do
         if @event.registration_enabled?
           link_to('フォームから参加登録をする', :action => 'registration')
         else
@@ -10,7 +10,7 @@ module EventsHelper
         end
       end
     else
-      content_tag outer, :class => "registration_external" do
+      content_tag outer, {:class => "registration_external"}, false do
         render_hiki(@event.register_information)
       end
     end

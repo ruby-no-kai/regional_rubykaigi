@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def render_hiki(text)
     hikified = HikiDoc.to_html(text, :level => 3, :use_wiki_name => false, :allow_bracket_inline_image => false)
-    hikified
+    raw(hikified)
   end
 
   def link_to_hikidoc

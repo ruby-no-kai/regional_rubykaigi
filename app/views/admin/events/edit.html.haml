@@ -3,8 +3,11 @@
 %p= link_to '参加登録者の一覧', admin_event_attendees_path(@event)
 
 #edit_event
-  - form_for(@event, :url => {:action => 'update'}) do |f|
-    = f.error_messages
+  = form_for(@event, :url => {:action => 'update'}) do |f|
+    - if @event.errors.any?
+      <ul>
+      - @event.errors.full_messages.each do |msg|
+        %li= msg
     = render :partial => "form", :locals => {:form => f}
     %p= f.submit "Update"
 

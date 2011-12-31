@@ -1,4 +1,5 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+# -*- coding: utf-8 -*-
+require 'spec_helper'
 
 describe EventsHelper do
   include EventsHelper
@@ -9,7 +10,7 @@ describe EventsHelper do
     end
 
     it "should render registration_external" do
-      render_registration_link.should have_tag("div.registration_link")
+      render_registration_link.should have_selector("div.registration_link")
     end
   end
 
@@ -20,7 +21,7 @@ describe EventsHelper do
 
     it "should render registration_external" do
       self.should_receive(:render_hiki).and_return("content")
-      render_registration_link.should have_tag("div.registration_external")
+      render_registration_link.should have_selector("div.registration_external")
     end
   end
 end

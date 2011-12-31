@@ -1,55 +1,26 @@
-ActionController::Routing::Routes.draw do |map|
-  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.login '/login', :controller => 'sessions', :action => 'new'
-  map.resource :session
+RegionalRubykaigi::Application.routes.draw do
+  root :to => 'events#index'
 
-  map.namespace(:admin) do |admin|
-    admin.resources :events, :member => { :preview => :put }
-    admin.resources :events do |event|
-      event.resources :attendees
+  match '/logout' => 'sessions#destroy', :as => :logout
+  match '/login' => 'sessions#new', :as => :login
+
+  resource :session
+
+  namespace :admin do
+    resources :events do
+      member do
+        put :preview
+      end
     end
-    admin.resources :users
+    resources :events do
+      resources :attendees
+    end
+    resources :users
   end
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  match '/' => 'events#index'
 
-  # Sample of regular route:
-  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
-  # Keep in mind you can assign values other than :controller and :action
+  match ':name(/:action)' => 'events#show', :as => :event, :constraints => { :name => /[a-z]+\d+/ }
 
-  # Sample of named route:
-  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
-
-  # Sample resource route with options:
-  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
-
-  # Sample resource route with sub-resources:
-  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-
-  # Sample resource route with more complex sub-resources
-  #   map.resources :products do |products|
-  #     products.resources :comments
-  #     products.resources :sales, :collection => { :recent => :get }
-  #   end
-
-  # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
-
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "events"
-  map.event ':name/:action', :controller => 'events', :action => 'show',
-  :requirements => { :name => /[a-z]+\d+/ }
-
-  # See how all your routes lay out with "rake routes"
-
-  # Install the default routes as the lowest priority.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  match '/:controller(/:action(/:id))'
 end
