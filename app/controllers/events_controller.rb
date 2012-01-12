@@ -32,20 +32,18 @@ class EventsController < ApplicationController
     end
   end
 
+  TOKYO_MAPPINGS = {
+    'tokyo02' => 'tokyu01',
+    'tokyo04' => 'tokyu02',
+    'tokyo06' => 'oedo01',
+    'oedorubykaigi01' => 'oedo01',
+    'tokyo07' => 'tokyu04',
+    'tokyo08' => 'tokyu05',
+  }.freeze
   private
   def fetch_event
-    case params[:name]
-    when "tokyo02"
-      redirect_to event_path(:action => 'show', :name => 'tokyu01')
-      return
-    when "tokyo04"
-      redirect_to event_path(:action => 'show', :name => 'tokyu02')
-      return
-    when "tokyo06", "oedorubykaigi01"
-      redirect_to event_path(:action => 'show', :name => 'oedo01')
-      return
-    when "tokyo07"
-      redirect_to event_path(:action => 'show', :name => 'tokyu03')
+    if(regional_tokyo = TOKYO_MAPPINGS[params[:name]])
+      redirect_to event_path(:action => 'show', :name => regional_tokyo)
       return
     end
 
