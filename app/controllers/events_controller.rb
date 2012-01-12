@@ -37,8 +37,8 @@ class EventsController < ApplicationController
     'tokyo04' => 'tokyu02',
     'tokyo06' => 'oedo01',
     'oedorubykaigi01' => 'oedo01',
-    'tokyo07' => 'tokyu04',
-    'tokyo08' => 'tokyu05',
+    'tokyo07' => 'tokyu03',
+    'tokyo08' => 'tokyu04',
   }.freeze
   private
   def fetch_event
