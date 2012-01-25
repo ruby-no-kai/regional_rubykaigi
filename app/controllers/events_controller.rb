@@ -36,18 +36,18 @@ class EventsController < ApplicationController
     'tokyo02' => 'tokyu01',
     'tokyo04' => 'tokyu02',
     'tokyo06' => 'oedo01',
-    'oedorubykaigi01' => 'oedo01',
     'tokyo07' => 'tokyu03',
     'tokyo08' => 'tokyu04',
   }.freeze
   private
   def fetch_event
-    if(regional_tokyo = TOKYO_MAPPINGS[params[:name]])
+    event_name = params[:name]
+    if(regional_tokyo = TOKYO_MAPPINGS[event_name])
       redirect_to event_path(:action => 'show', :name => regional_tokyo)
       return
     end
 
-    @event = Event.find_by_name(params[:name])
+    @event = find_event_by_name_or_synonyms(event_name)
     unless @event
       render :file => "public/404.html", :status => 404
       return
@@ -81,5 +81,10 @@ class EventsController < ApplicationController
     rescue ActionView::MissingTemplate
       return false
     end
+  end
+
+  def find_event_by_name_or_synonyms(name)
+    Event.find_by_name(name) || Event.find(:first,
+      :conditions => ['synonyms LIKE :synonyms', {:synonyms => "%#{name}%"}])
   end
 end

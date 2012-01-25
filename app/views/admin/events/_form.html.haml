@@ -9,6 +9,12 @@
   %br
   ハッシュタグ('#'も含めてください):
   = form.text_field :hashtag
+  %br
+%p
+  URLとして使う名前の別名(あれば):
+  = form.text_field :synonyms
+  %br
+  (スペースで区切って並べてください。英数字のみにしてください。例えば、sapporo2012とsapporo04、sprk2012を同じイベントを指すようにしたい場合、URLとして使う名前をsapporo2012、別名に「sapporo04 sprk12」を指定してください。別名の重複は今のところチェックしていません……)。
 %p
   イベントの会期:<br />
   開始日:
