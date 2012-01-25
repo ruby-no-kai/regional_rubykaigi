@@ -2,7 +2,7 @@
 source :rubygems
 source 'http://gems.github.com'
 
-gem 'rails', '2.3.10', :require => nil
+gem 'rails', '2.3.14', :require => nil
 gem 'haml'
 gem 'ruby-openid', :require => 'openid'
 gem 'sqlite3-ruby'
@@ -15,6 +15,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 1.3.0'
   gem 'factory_girl'
 end
