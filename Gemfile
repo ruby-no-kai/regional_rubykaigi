@@ -8,6 +8,8 @@ gem 'ruby-openid', :require => 'openid'
 gem 'sqlite3-ruby'
 gem 'rspec'
 
+gem 'rack-openid'
+
 group :development do
   gem 'thin', :require => nil
   gem 'capistrano', :require => nil

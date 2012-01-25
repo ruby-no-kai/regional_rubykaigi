@@ -85,3 +85,5 @@ config.action_controller.session = {
 end
 
 app_configs.each(&:freeze) if RAILS_ENV == "production"
+
+OpenIdAuthentication.store = :file
