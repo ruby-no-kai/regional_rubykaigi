@@ -18,7 +18,7 @@
     - unless @upcomings.blank?
       = list_of @upcomings do |event|
         &== #{dates_of event}:
-        %span.event_name= link_to_if event.published?, h(event.title), event_path(:action => 'show', :name => event.name)
+        %span.event_name= link_to_if event.published?, h(event.title), path_or_redirect_to(event)
 
         -# TODO duplicated
         - if logged_in_as_admin?
@@ -31,7 +31,7 @@
   %ul
     = list_of @archives do |event|
       &== #{dates_of event}:
-      = link_to h(event.title), url_for(:action => 'show', :name => event.name)
+      = link_to h(event.title), path_or_redirect_to(event)
 
       -# TODO duplicated
       - if logged_in_as_admin?

@@ -29,4 +29,12 @@ module EventsHelper
       "#{event.start_on.strftime("%Y-%m-%d(%a)")}〜#{event.end_on.strftime('%m-%d(%a)')}"
     end
   end
+
+  def path_or_redirect_to(event)
+    if event.redirect_to_external? && event.redirect_url.present?
+      event.redirect_url
+    else
+      event_path(:action => 'show', :name => event.name)
+    end
+  end
 end

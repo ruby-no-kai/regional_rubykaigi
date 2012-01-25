@@ -37,6 +37,15 @@
   %br
   (このチェックボックスをONにすると、一般の閲覧者からはイベントの存在が見えなくなります)
 
+%p
+  %fieldset#redirect_to_external
+    %legend
+      = form.check_box :redirect_to_external
+      = form.label :redirect_to_external, '外部サイトにリダイレクトする'
+    %p
+      リダイレクト先URL:
+      = form.text_field :redirect_url, :size => 70
+    (これを設定すると、regional.rubykaigi.org は便宜的にURLを提供するだけになります)
 
 %p
   申し込み登録の設定:

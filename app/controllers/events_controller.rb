@@ -52,6 +52,12 @@ class EventsController < ApplicationController
       render :file => "public/404.html", :status => 404
       return
     end
+
+    if @event.redirect_to_external? && @event.redirect_url.present?
+      redirect_to @event.redirect_url
+      return
+    end
+
     @page_title = @event.title
   end
 
