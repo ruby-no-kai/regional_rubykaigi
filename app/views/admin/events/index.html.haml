@@ -10,7 +10,7 @@
         %br
         %div{:style => "text-align:right"}
           = link_to  '編集', edit_admin_event_path(event)
-          = link_to '<strong>削除</strong>', {:action => 'destroy', :id => event}, :confirm => 'Are you sure?', :method => :delete
+          = link_to raw('<strong>削除</strong>'), admin_event_path(event), :confirm => 'Are you sure?', :method => :delete
       %td= link_to '参加登録者一覧', admin_event_attendees_path(event)
       %td= link_to '参加登録者一覧(CSV)', admin_event_attendees_path(event, :format => 'csv')
       %td= link_to '公開ページ', event_path(:name => event.name)
